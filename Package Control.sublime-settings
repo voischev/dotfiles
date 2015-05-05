@@ -1,0 +1,18 @@
+{
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"All Autocomplete",
+		"AutoFileName",
+		"DocBlockr",
+		"EasyMotion",
+		"Hayaku - tools for writing CSS faster",
+		"JavaScript & NodeJS Snippets",
+		"Package Control",
+		"SublimeLinter",
+		"SublimeLinter-jscs",
+		"SublimeLinter-jshint"
+	]
+}
