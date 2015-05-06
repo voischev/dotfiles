@@ -4,7 +4,5 @@
   { "keys": ["super+v"], "command": "paste_and_indent" }, // Теперь cmd+v вставляет текст с форматирование
   { "keys": ["super+shift+v"], "command": "paste" }, // А cmd+shift+v без
   { "keys": ["ctrl+alt+up"], "command": "scroll_lines", "args": {"amount": 20.0} }, // Что бы быстрее скролить с клавиатуры
-  { "keys": ["ctrl+alt+down"], "command": "scroll_lines", "args": {"amount": -20.0} },
-  { "keys": ["super+v"], "command": "paste_and_indent" },
-  { "keys": ["super+shift+v"], "command": "paste" }
+  { "keys": ["ctrl+alt+down"], "command": "scroll_lines", "args": {"amount": -20.0} }
 ]
