@@ -21,6 +21,8 @@
 * [JSHint](https://sublime.wbond.net/packages/JSHint)
 * [CSScomb](https://sublime.wbond.net/packages/CSScomb)
 * [Bracket​Highlighter](https://packagecontrol.io/packages/BracketHighlighter)
+* [HTML-CSS-JS Prettify](https://packagecontrol.io/packages/HTML-CSS-JS%20Prettify)
+* [Sublimetext Codeformatter](https://github.com/akalongman/sublimetext-codeformatter)
 
 ## Articles
 * [Как превратить Sublime Text в идеальный инструмент для работы с текстом](https://xakep.ru/2014/07/28/sublime-text-not-for-coding/)
