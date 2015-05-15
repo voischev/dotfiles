@@ -20,5 +20,6 @@
 	"trim_trailing_white_space_on_save": true,
 	"word_separators": "./\\()\"':,.;<>~!@#$%^&*|+=[]{}`~?",
 	"word_wrap": false,
-	"ignored_packages": []
+	"ignored_packages": [],
+	"folder_exclude_patterns": [".svn", ".git", ".hg", "CVS", ".libs-*"],
 }
