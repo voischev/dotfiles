@@ -30,5 +30,6 @@
 	"tree_animation_enabled": false,
 	"trim_trailing_white_space_on_save": true,
 	"word_separators": "./\\()\"':,.;<>~!@#$%^&*|+=[]{}`~?",
-	"word_wrap": false
+	"word_wrap": false,
+	"indent_to_bracket": true
 }
