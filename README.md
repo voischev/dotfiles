@@ -7,8 +7,10 @@
 ```
 defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
 ```
-[Gist](https://gist.github.com/kconragan/2510186)
+
 Restart Sublime
+
+[Gist](https://gist.github.com/kconragan/2510186)
 
 ## Plugins
 
