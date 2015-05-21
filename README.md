@@ -3,6 +3,12 @@
 * [Installation](https://packagecontrol.io/installation)
 * [Workflow](https://gist.github.com/voischev/e5baebc780dd810ba4e2)
 
+## [For Vintage Node](http://www.sublimetext.com/docs/3/vintage.html)
+```
+defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
+```
+Restart Sublime
+
 ## Plugins
 
 * [All Autocomplete](https://sublime.wbond.net/packages/All%20Autocomplete)

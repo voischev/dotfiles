@@ -2,7 +2,7 @@
 	"animation_enabled": false,
 	"bold_folder_labels": true,
 	"close_windows_when_empty": false,
-	"color_scheme": "Packages/User/SublimeLinter/Mac Classic (SL).tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/Solarized (Dark) (SL).tmTheme",
 	"create_window_at_startup": false,
 	"draw_white_space": "all",
 	"enable_tab_scrolling": false,
@@ -20,6 +20,7 @@
 	"ignored_packages":
 	[
 	],
+	"indent_to_bracket": true,
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
 	"open_files_in_new_window": false,
@@ -31,5 +32,5 @@
 	"trim_trailing_white_space_on_save": true,
 	"word_separators": "./\\()\"':,.;<>~!@#$%^&*|+=[]{}`~?",
 	"word_wrap": false,
-	"indent_to_bracket": true
+	"vintage_start_in_command_mode": true
 }
