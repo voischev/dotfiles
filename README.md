@@ -3,10 +3,11 @@
 * [Installation](https://packagecontrol.io/installation)
 * [Workflow](https://gist.github.com/voischev/e5baebc780dd810ba4e2)
 
-## [For Vintage Node](http://www.sublimetext.com/docs/3/vintage.html)
+## [For Vintage Mode](http://www.sublimetext.com/docs/3/vintage.html)
 ```
 defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
 ```
+[Gist](https://gist.github.com/kconragan/2510186)
 Restart Sublime
 
 ## Plugins
