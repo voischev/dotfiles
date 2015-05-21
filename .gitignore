@@ -1,6 +1,9 @@
 # OS
 .DS_Store
 
+# NODEJS
+npm-debug.log
+
 # Sublime Text
 Package Control.last-run
 Package Control.ca-list
