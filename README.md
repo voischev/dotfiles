@@ -21,9 +21,10 @@ Restart Sublime
 * [EditorConfig](https://packagecontrol.io/packages/EditorConfig)
 * [Hayaku - tools for writing CSS faster](https://packagecontrol.io/packages/Hayaku%20-%20tools%20for%20writing%20CSS%20faster)
 * [Java​Script & Node​JS Snippets](https://packagecontrol.io/packages/JavaScript%20%26%20NodeJS%20Snippets)
-* [Sublime Linter](https://packagecontrol.io/packages/SublimeLinter)
 * [Sublime Linter-jscs](https://packagecontrol.io/packages/SublimeLinter-jscs)
 * [Sublime Linter-jshint](https://packagecontrol.io/packages/SublimeLinter-jshint)
+* [Sublime Linter](https://packagecontrol.io/packages/SublimeLinter)
+* [Terminal](https://packagecontrol.io/packages/Terminal)
 
 ## Interesting plugins
 
