@@ -14,6 +14,7 @@ Restart Sublime
 
 ## Plugins
 
+* [AdvancedNewFile](https://packagecontrol.io/packages/AdvancedNewFile)
 * [All Autocomplete](https://sublime.wbond.net/packages/All%20Autocomplete)
 * [AutoFileName](https://sublime.wbond.net/packages/AutoFileName)
 * [Doc​Blockr](https://packagecontrol.io/packages/DocBlockr)
