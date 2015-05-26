@@ -30,7 +30,7 @@
 	"translate_tabs_to_spaces": true,
 	"tree_animation_enabled": false,
 	"trim_trailing_white_space_on_save": true,
+	"vintage_start_in_command_mode": true,
 	"word_separators": "./\\()\"':,.;<>~!@#$%^&*|+=[]{}`~?",
-	"word_wrap": false,
-	"vintage_start_in_command_mode": true
+	"word_wrap": false
 }
