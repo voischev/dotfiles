@@ -1,9 +1,69 @@
 [
-  { "keys": ["super+shift+r"], "command": "refresh_folder_list" }, // Обновить список файлов и директорий в sidebar:
-  { "keys": ["super+shift+o"], "command": "open_dir", "args": {"dir": "$file_path", "file": "$file_name"} }, // Открыть директорию с текущим файлом
-  { "keys": ["super+v"], "command": "paste_and_indent" }, // Теперь cmd+v вставляет текст с форматирование
-  { "keys": ["super+shift+v"], "command": "paste" }, // А cmd+shift+v без
-  { "keys": ["ctrl+alt+up"], "command": "scroll_lines", "args": {"amount": 20.0} }, // Что бы быстрее скролить с клавиатуры
-  { "keys": ["ctrl+alt+down"], "command": "scroll_lines", "args": {"amount": -20.0} },
-  { "keys": ["super+shift+r"], "command": "reindent", "args": { "single_line": false }}
+    /* SIDEBAR */
+
+    // Показать/спрятать Sidebar в командном режиме
+    {
+        "keys": ["backspace"],
+        "command": "toggle_side_bar",
+        "context": [{ "key": "setting.command_mode" }]
+    },
+
+    // Обновить список файлов и директорий в sidebar:
+    {
+        "keys": ["super+shift+r"],
+        "command": "refresh_folder_list"
+    },
+
+    // Фокус на Sidebar в командном режиме
+    // {
+    //     "keys": ["backspace"],
+    //     "command": "focus_side_bar",
+    //     "context": [{ "key": "setting.command_mode" }]
+    // },
+
+
+    /* FILES */
+
+    // Открыть директорию с текущим файлом
+    {
+        "keys": ["super+shift+o"],
+        "command": "open_dir",
+        "args": { "dir": "$file_path", "file": "$file_name"}
+    },
+
+
+    /* TEXT */
+
+    // Теперь cmd+v вставляет текст с форматирование
+    {
+        "keys": ["super+v"],
+        "command": "paste_and_indent"
+    },
+
+    // А cmd+shift+v без
+    {
+        "keys": ["super+shift+v"],
+        "command": "paste"
+    },
+
+
+    /* NAVIGATION */
+
+    // Что бы быстрее скролить с клавиатуры
+    {
+        "keys": ["ctrl+alt+up"],
+        "command": "scroll_lines",
+        "args": {"amount": 20.0}
+    },
+    {
+        "keys": ["ctrl+alt+down"],
+        "command": "scroll_lines",
+        "args": {"amount": -20.0}
+    },
+
+    {
+        "keys": ["super+shift+r"],
+        "command": "reindent",
+        "args": { "single_line": false }
+    },
 ]

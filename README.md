@@ -12,6 +12,8 @@ Restart Sublime
 
 [Gist](https://gist.github.com/kconragan/2510186)
 
+[link1](https://github.com/nackjicholson/sublimetext2-customize-vintage-mode/blob/master/Default%20(OSX).sublime-keymap)
+
 ## Plugins
 
 * [AdvancedNewFile](https://packagecontrol.io/packages/AdvancedNewFile)
