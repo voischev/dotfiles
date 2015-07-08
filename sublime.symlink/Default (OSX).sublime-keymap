@@ -8,12 +8,6 @@
         "context": [{ "key": "setting.command_mode" }]
     },
 
-    // Обновить список файлов и директорий в sidebar:
-    {
-        "keys": ["super+shift+r"],
-        "command": "refresh_folder_list"
-    },
-
     // Фокус на Sidebar в командном режиме
     // {
     //     "keys": ["backspace"],
@@ -31,18 +25,38 @@
         "args": { "dir": "$file_path", "file": "$file_name"}
     },
 
-    // Хоткей для плагина Quick file move
+    // Хоткеи для плагина Advanced New File New
     {
-        "keys": ["super+shift+m"],
-        "command": "quick_file_move"
+        "keys": ["alt+n"],
+        "caption": "ANF: New File",
+        "command": "advanced_new_file_new",
+        // "context": [{ "key": "setting.command_mode" }]
     },
-
-    // Хоткей для плагина Advanced New File New
     {
-        "keys": ["super+shift+n"],
-        "command": "advanced_new_file_new"
+        "keys": ["alt+m"],
+        "caption": "ANF: Move File",
+        "command": "advanced_new_file_move",
+        // "context": [{ "key": "setting.command_mode" }]
     },
-
+    {
+        "keys": ["alt+d"],
+        "caption": "ANF: Delete Current File",
+        "command": "advanced_new_file_delete",
+        "args": { "current": true },
+        // "context": [{ "key": "setting.command_mode" }]
+    },
+    {
+        "keys": ["alt+shift+d"],
+        "caption": "ANF: Delete File",
+        "command": "advanced_new_file_delete",
+        // "context": [{ "key": "setting.command_mode" }]
+    },
+    {
+        "keys": ["alt+c"],
+        "caption": "ANF: Copy Current File",
+        "command": "advanced_new_file_copy",
+        // "context": [{ "key": "setting.command_mode" }]
+    },
     /* TEXT */
 
     // Теперь cmd+v вставляет текст с форматирование
@@ -55,26 +69,5 @@
     {
         "keys": ["super+shift+v"],
         "command": "paste"
-    },
-
-
-    /* NAVIGATION */
-
-    // Что бы быстрее скролить с клавиатуры
-    {
-        "keys": ["ctrl+alt+up"],
-        "command": "scroll_lines",
-        "args": {"amount": 20.0}
-    },
-    {
-        "keys": ["ctrl+alt+down"],
-        "command": "scroll_lines",
-        "args": {"amount": -20.0}
-    },
-
-    {
-        "keys": ["super+shift+r"],
-        "command": "reindent",
-        "args": { "single_line": false }
-    },
+    }
 ]

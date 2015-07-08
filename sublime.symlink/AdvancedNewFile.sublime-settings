@@ -1,4 +1,9 @@
 {
+    "alias": {
+        "desktop": "~/Desktop"
+    },
+
+    "default_root": "current", // project_folder
 
     "show_files": true,
     "show_path": true,
@@ -9,6 +14,8 @@
     "file_templates": {
         "md": "boweser.js",
     },
+
+    "rename_default": "<filename>",
 
     "warn_overwrite_on_move": true
 }
