@@ -31,6 +31,17 @@
         "args": { "dir": "$file_path", "file": "$file_name"}
     },
 
+    // Хоткей для плагина Quick file move
+    {
+        "keys": ["super+shift+m"],
+        "command": "quick_file_move"
+    },
+
+    // Хоткей для плагина Advanced New File New
+    {
+        "keys": ["super+shift+n"],
+        "command": "advanced_new_file_new"
+    },
 
     /* TEXT */
 

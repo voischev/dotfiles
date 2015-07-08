@@ -1,0 +1,14 @@
+{
+
+    "show_files": true,
+    "show_path": true,
+    "completion_type": "nix",
+    "use_folder_name": true,
+
+    // TODO: Кажестся это прикольная штука, нужно разобраться
+    "file_templates": {
+        "md": "boweser.js",
+    },
+
+    "warn_overwrite_on_move": true
+}
