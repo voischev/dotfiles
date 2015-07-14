@@ -5,6 +5,7 @@
 	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
 	"material_theme_small_tab": true,
 	"material_theme_small_statusbar": true,
+	"material_theme_disable_folder_animation": true,
 	"create_window_at_startup": false,
 	"draw_white_space": "all",
 	"enable_tab_scrolling": false,
