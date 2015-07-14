@@ -8,14 +8,6 @@
         "context": [{ "key": "setting.command_mode" }]
     },
 
-    // Фокус на Sidebar в командном режиме
-    // {
-    //     "keys": ["backspace"],
-    //     "command": "focus_side_bar",
-    //     "context": [{ "key": "setting.command_mode" }]
-    // },
-
-
     /* FILES */
 
     // Открыть директорию с текущим файлом
