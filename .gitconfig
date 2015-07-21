@@ -1,0 +1,9 @@
+[user]
+    name = Ivan Voischev
+    email = voischev.ivan@ya.ru
+[core]
+    editor = vim
+[merge]
+    tool = vimdiff
+[push]
+    default = matching

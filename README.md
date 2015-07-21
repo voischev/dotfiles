@@ -2,7 +2,7 @@
 
 ## Install
 ```
-git clone https://github.com/voischev/dotfiles.git ~/.dotfiles
+git clone https://github.com/voischev/dotfiles.git ~/.dotfiles && ~/.dotfiles/init
 ```
 
 ## Sublime. Mac OS

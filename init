@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Dotfiles init
+export DOTFILES=$HOME/.dotfiles
+
+ln -s $DOTFILES/.zshrc       $HOME/.zshrc
+ln -s $DOTFILES/.jshintrc    $HOME/.jshintrc
+ln -s $DOTFILES/.gitignore   $HOME/.gitignore
+ln -s $DOTFILES/.gitconfig   $HOME/.gitconfig
+
+# Sublime Text init
+cd $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/
+rm -rf User
+ln -s $DOTFILES/sublime User
