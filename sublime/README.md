@@ -8,13 +8,6 @@
 defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
 ```
 
-## Mac OS
-```
-cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
-mv -r User UserOld
-ln -s ~/.dotfiles/sublime.symlink User
-```
-
 Restart Sublime
 
 [Gist](https://gist.github.com/kconragan/2510186)
