@@ -2,5 +2,6 @@
     "extensions":
     [
         "styl"
-    ]
+    ],
+    "hayaku_CSS_prefixes_disable": true
 }
