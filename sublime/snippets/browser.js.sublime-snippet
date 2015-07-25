@@ -1,0 +1,26 @@
+<snippet>
+    <content><![CDATA[/**
+ * @module ${TM_FILENAME/^(\w)|(?:\.(\w*))/(?1$1:)/g}
+ */
+
+modules.define(
+    '${1:${TM_FILENAME/^(\w)|(?:\.(\w*))/(?1$1:)/g}}',
+    ${2:['i-bem__dom'],}
+    function(provide${3:, BEMDOM}) {
+
+/**
+ * @exports
+ * @class ${TM_FILENAME/^(\w)|(?:\.(\w*))/(?1$1:)/g}
+ * @bem
+ */
+provide(${4:BEMDOM.decl(this.name, {
+    ${0}
+\})});
+
+});
+
+]]></content>
+    <tabTrigger>browser.js</tabTrigger>
+    <scope>source.js</scope>
+    <description>modules.define (ymodules)</description>
+</snippet>

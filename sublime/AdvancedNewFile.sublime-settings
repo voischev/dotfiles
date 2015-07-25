@@ -12,8 +12,12 @@
 
     // TODO: Кажестся это прикольная штука, нужно разобраться
     "file_templates": {
-        // "browser.js": "./snippets/md.sublime-snippet",
-        "bemhtml": "block('${1:moduleName}')",
+        "js": [
+            "Default",
+            "Packages/User/snippets/browser.js.sublime-snippet"
+        ],
+        "bemhtml": ["Packages/User/snippets/bemhtml.sublime-snippet"],
+        "bemtree": ["Packages/User/snippets/bemhtml.sublime-snippet"]
     },
 
     "rename_default": "<filename>",
