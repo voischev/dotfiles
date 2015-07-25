@@ -12,7 +12,8 @@
 
     // TODO: Кажестся это прикольная штука, нужно разобраться
     "file_templates": {
-        "md": "boweser.js",
+        // "browser.js": "./snippets/md.sublime-snippet",
+        "bemhtml": "block('${1:moduleName}')",
     },
 
     "rename_default": "<filename>",
