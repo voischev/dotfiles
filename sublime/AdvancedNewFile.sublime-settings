@@ -14,7 +14,7 @@
     "file_templates": {
         "js": [
             "Default",
-            "Packages/User/snippets/browser.js.sublime-snippet"
+            "Packages/User/snippets/ymodules.sublime-snippet"
         ],
         "bemhtml": ["Packages/User/snippets/bemhtml.sublime-snippet"],
         "bemtree": ["Packages/User/snippets/bemhtml.sublime-snippet"]

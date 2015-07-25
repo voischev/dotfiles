@@ -20,7 +20,7 @@ provide(${4:BEMDOM.decl(this.name, {
 });
 
 ]]></content>
-    <tabTrigger>browser.js</tabTrigger>
+    <tabTrigger>ym</tabTrigger>
     <scope>source.js</scope>
     <description>modules.define (ymodules)</description>
 </snippet>
