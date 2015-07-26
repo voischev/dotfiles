@@ -8,7 +8,7 @@
         "lint_mode": "background",
         "linters": {
             "eslint": {
-                "@disable": false,
+                "@disable": true,
                 "args": [],
                 "excludes": []
             },
