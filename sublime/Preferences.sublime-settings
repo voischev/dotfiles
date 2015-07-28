@@ -58,5 +58,12 @@
 	"trim_trailing_white_space_on_save": true,
 	"vintage_start_in_command_mode": true,
 	"word_separators": "./\\()\"':,.;<>~!@#$%^&*|+=[]{}`~?",
-	"word_wrap": false
+	"word_wrap": false,
+	"show_minimap": false,
+	"rulers": [80],
+	"caret_style": "wide",
+	"ensure_newline_at_eof_on_save": true,
+	"indent_to_bracket": true,
+	"margin": 0,
+	"trim_trailing_white_space_on_save": true
 }
