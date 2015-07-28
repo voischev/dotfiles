@@ -4,8 +4,7 @@
     // Показать/спрятать Sidebar в командном режиме
     {
         "keys": ["backspace"],
-        // "command": "toggle_side_bar
-        "command": "focus_side_bar",
+        "command": "toggle_side_bar",
         "context": [{ "key": "setting.command_mode" }]
     },
     /* FILES */
