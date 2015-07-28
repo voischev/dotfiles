@@ -2,5 +2,5 @@
     <content><![CDATA[block('${1:${TM_FILENAME/^(\w)|(?:\.(\w*))/(?1$1:)/g}}')${0}]]></content>
     <tabTrigger>blo</tabTrigger>
     <scope>source.js</scope>
-    <description>bemhtml/bemhtml template</description>
+    <description>bemhtml/bemtree template</description>
 </snippet>
