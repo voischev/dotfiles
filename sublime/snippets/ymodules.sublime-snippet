@@ -1,5 +1,7 @@
 <snippet>
-    <content><![CDATA[/**
+    <content><![CDATA[/* global modules:false */
+
+/**
  * @module ${TM_FILENAME/^(\w)|(?:\.(\w*))/(?1$1:)/g}
  */
 
