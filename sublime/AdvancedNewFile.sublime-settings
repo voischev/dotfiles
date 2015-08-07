@@ -12,6 +12,7 @@
     "use_folder_name": true,
 
     "file_templates": {
+        "css": ["Packages/User/snippets/css.sublime-snippet"],
         "js": [
             "Empty",
             "Packages/User/snippets/ymodules.sublime-snippet",
