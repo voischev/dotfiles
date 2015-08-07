@@ -1,6 +1,7 @@
 {
     "alias": {
-        "desktop": "~/Desktop"
+        "desktop": "~/Desktop",
+        "home": "~/"
     },
 
     "default_root": "current", // project_folder
@@ -10,13 +11,11 @@
     "completion_type": "nix",
     "use_folder_name": true,
 
-    // TODO: Кажестся это прикольная штука, нужно разобраться
     "file_templates": {
         "js": [
-            "Default",
+            "Empty",
             "Packages/User/snippets/ymodules.sublime-snippet",
-            "Packages/User/snippets/yspec.sublime-snippet",
-            "Packages/User/snippets/bemhtml.sublime-snippet"
+            "Packages/User/snippets/yspec.sublime-snippet"
         ],
         "bemhtml": ["Packages/User/snippets/bemhtml.sublime-snippet"],
         "bemtree": ["Packages/User/snippets/bemhtml.sublime-snippet"]
