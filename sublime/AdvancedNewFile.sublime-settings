@@ -16,7 +16,8 @@
         "js": [
             "Empty",
             "Packages/User/snippets/ymodules.sublime-snippet",
-            "Packages/User/snippets/yspec.sublime-snippet"
+            "Packages/User/snippets/yspec.sublime-snippet",
+            "Packages/User/snippets/bemhtml.sublime-snippet"
         ],
         "bemhtml": ["Packages/User/snippets/bemhtml.sublime-snippet"],
         "bemtree": ["Packages/User/snippets/bemhtml.sublime-snippet"]
