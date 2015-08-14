@@ -82,3 +82,10 @@ source $ZSH/oh-my-zsh.sh
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# Notes
+
+create_note() {
+    subl ~/Yandex.Disk.localized/Notes/$1.txt
+}
+alias note=create_note
