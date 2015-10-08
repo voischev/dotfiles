@@ -1,0 +1,13 @@
+[user]
+    name = Ivan Voischev
+    email = voischev.ivan@ya.ru
+[core]
+    editor = vim
+[merge]
+    tool = vimdiff
+[push]
+    default = matching
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
