@@ -13,13 +13,11 @@ brew cleanup
 # oh-my-zsh
 curl -L http://install.ohmyz.sh | sh
 
-#VIMI
-git clone git://github.com/voischev/vimi.git ~/.vimi && cd ~/.vimi && make
-
 # Dotfiles init
 export DOTFILES=$HOME/.dotfiles
 
 ln -s $DOTFILES/zshrc           $HOME/.zshrc
+ln -s $DOTFILES/vimrc           $HOME/.vimrc
 ln -s $DOTFILES/jscsrc          $HOME/.jscsrc
 ln -s $DOTFILES/jshintrc        $HOME/.jshintrc
 ln -s $DOTFILES/jshintignore    $HOME/.jshintignore
