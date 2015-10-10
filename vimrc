@@ -1,5 +1,7 @@
 " Make Vim more useful
 set nocompatible
+syntax enable
+
 
 " Interface
     " Character encoding used inside Vim
@@ -114,6 +116,10 @@ set nocompatible
     " Only available when compiled with the +path_extra feature
     set path=.,,**
 
+" Color themes
+set background=dark
+colorscheme solarized
+
 " Status line
     function! FileSize()
         let bytes = getfsize(expand("%:p"))
@@ -169,19 +175,16 @@ set nocompatible
     menu Encoding.koi8-r :e ++enc=koi8-r<CR>
     menu Encoding.cp866 :e ++enc=cp866<CR>
 
-" Spell checking
-    if version >= 700
-        " Turn off spell checking
-        set nospell
-        menu Spell.off :setlocal spell spelllang= <cr>
-        menu Spell.Russian+English :setlocal spell spelllang=ru,en <cr>
-        menu Spell.Russian :setlocal spell spelllang=ru <cr>
-        menu Spell.English :setlocal spell spelllang=en <cr>
-        menu Spell.-SpellControl- :
-        menu Spell.Word\ Suggest<Tab>z= z=
-        menu Spell.Previous\ Wrong\ Word<Tab>[s [s
-        menu Spell.Next\ Wrong\ Word<Tab>]s ]s
-    endif
+    " Turn off spell checking
+    set nospell
+    menu Spell.off :setlocal spell spelllang= <cr>
+    menu Spell.Russian+English :setlocal spell spelllang=ru,en <cr>
+    menu Spell.Russian :setlocal spell spelllang=ru <cr>
+    menu Spell.English :setlocal spell spelllang=en <cr>
+    menu Spell.-SpellControl- :
+    menu Spell.Word\ Suggest<Tab>z= z=
+    menu Spell.Previous\ Wrong\ Word<Tab>[s [s
+    menu Spell.Next\ Wrong\ Word<Tab>]s ]s
 
 " Folding
     " za = toggle current fold
