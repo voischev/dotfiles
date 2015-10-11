@@ -37,5 +37,7 @@ ln -s $DOTFILES/gitconfig       $HOME/.gitconfig
 cd $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/
 rm -rf User
 ln -s $DOTFILES/sublime User
+
+# OSX
 ## [For Vintage Mode](http://www.sublimetext.com/docs/3/vintage.html)
 defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false

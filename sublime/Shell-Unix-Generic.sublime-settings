@@ -1,0 +1,10 @@
+{
+    "extensions":
+    [
+        "zshrc"
+    ],
+    "rulers":
+    [
+        80
+    ]
+}

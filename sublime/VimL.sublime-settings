@@ -1,0 +1,10 @@
+{
+    "extensions":
+    [
+        "vimrc"
+    ],
+    "rulers":
+    [
+        80
+    ]
+}

@@ -1,0 +1,8 @@
+{
+    "extensions":
+    [
+        "jshintrc",
+        "jscsrc"
+    ],
+    "translate_tabs_to_spaces": true,
+}

@@ -22,6 +22,7 @@
 		"SublimeLinter-jscs",
 		"SublimeLinter-jshint",
 		"Terminal",
-		"TodoReview"
+		"TodoReview",
+		"VimL"
 	]
 }
