@@ -8,12 +8,12 @@ brew install node
 brew install tree
 
 # cask
-brew tap caskroom/versions
-brew tap caskroom/versions
-brew install caskroom/cask/brew-cask
+# brew tap caskroom/versions
+# brew tap caskroom/versions
+# brew install caskroom/cask/brew-cask
 
 # brew cask install sublime-text
-brew cask install iterm2
+# brew cask install iterm2
 
 # Remove outdated versions from the cellar.
 brew cleanup
