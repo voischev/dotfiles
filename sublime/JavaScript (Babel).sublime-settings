@@ -1,7 +1,6 @@
 {
 	"extensions":
 	[
-		"bemtree",
-		"bemhtml"
+		"js"
 	]
 }
