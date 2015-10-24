@@ -45,12 +45,13 @@
 	[
 	],
 	"indent_to_bracket": true,
-	"line_padding_bottom": 2,
-	"line_padding_top": 2,
+	"line_padding_bottom": 3,
+	"line_padding_top": 3,
 	"margin": 0,
 	"material_theme_disable_folder_animation": true,
 	"material_theme_small_statusbar": true,
 	"material_theme_small_tab": true,
+	"material_theme_disable_tree_indicator": true,
 	"open_files_in_new_window": false,
 	"overlay_scroll_bars": "enabled",
 	"rulers":
