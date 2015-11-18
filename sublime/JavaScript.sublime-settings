@@ -2,6 +2,7 @@
 	"extensions":
 	[
 		"bemtree",
-		"bemhtml"
+		"bemhtml",
+		"bemjson.js"
 	]
 }
