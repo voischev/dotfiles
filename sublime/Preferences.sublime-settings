@@ -56,7 +56,7 @@
 	"overlay_scroll_bars": "enabled",
 	"rulers":
 	[
-		120
+		80
 	],
 	"scroll_past_end": true,
 	"show_minimap": false,
