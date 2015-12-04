@@ -3,6 +3,7 @@
     [
         ".jshintrc",
         ".jscsrc",
+        ".babelrc",
         "jshintrc",
         "jscsrc"
     ],
