@@ -3,6 +3,8 @@
 	[
 		"bemtree",
 		"bemhtml",
+        "bemtree.js",
+        "bemhtml.js",
 		"bemjson.js"
 	]
 }

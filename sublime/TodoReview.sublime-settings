@@ -8,7 +8,10 @@
     "exclude_folders": [
         "*.git*",
         "*node_modules*",
-        "*libs*"
+        "*libs*",
+        "*bundles*",
+        "*public*",
+        "*static*"
     ],
     "render_folder_depth": 2
 }
