@@ -89,3 +89,6 @@ create_note() {
     subl ~/Yandex.Disk.localized/Notes/$1.txt
 }
 alias note=create_note
+
+export NVM_DIR="/Users/voischev/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
