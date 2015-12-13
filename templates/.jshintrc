@@ -1,7 +1,7 @@
 {
     "eqeqeq": true,
     "expr": true,
-    "maxlen": 120,
+    "maxlen": 80,
     "undef": true,
     "unused": true
 }
