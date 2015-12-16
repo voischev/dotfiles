@@ -16,9 +16,16 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-repeat'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'gorkunov/smartpairs.vim'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/syntastic'
 Plugin 'pangloss/vim-javascript'
+" Plugin 'plasticboy/vim-markdown'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -42,6 +49,12 @@ set fileformat=unix
 set title
 set number
 set colorcolumn=80
+set showcmd
+set hidden
+set history=1000
+set backspace=indent,eol,start
+" set backupdir=~/.tmp
+" set directory=~/.tmp
 
 " indents
 set autoindent
@@ -55,10 +68,12 @@ set softtabstop=4
 set cursorline
 set list
 set listchars=tab:→\ ,trail:·,extends:❯,precedes:❮,nbsp:×
+set laststatus=2
+set statusline=#%n:\%t\ %m\ %{&fileencoding}\ %Y\ %3.3(%c%)\ %3.9(%l/%L%)\ %<
 set wrap
 set linebreak
 set t_Co=256
-"set visualbell
+set visualbell
 set background=dark
 colorscheme solarized
 
@@ -66,6 +81,7 @@ colorscheme solarized
 set incsearch
 set hlsearch
 
+" backups
 set nobackup
 set noswapfile
 
@@ -81,5 +97,30 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
-map <C-n> :NERDTreeToggle<CR>
+" create/open file in current folder
+map <Leader>n :e <C-R>=escape(expand("%:p:h"),' ') . '/'<CR>
 
+" paste mode
+nnoremap <leader>v :set invpaste paste?<CR>
+
+" buffers
+nnoremap <Leader>b :<C-u>ls<cr>:b
+nnoremap <Leader>bp :<C-u>bp<cr>
+nnoremap <Leader>bn :<C-u>bn<cr>
+
+
+map <C-n> :NERDTreeToggle<CR>
+autocmd vimenter * NERDTree
+let NERDTreeShowHidden=1
+let NERDTreeMinimalUI=1
+let NERDTreeQuitOnOpen=1
+let NERDTreeKeepTreeInNewTab=1
+
+let g:ctrlp_working_path_mode='a'
+set wildignore+=**/bower_components/*,**/node_modules/*
+let g:ctrlp_user_command = 'find %s -type f'
+
+" jump to
+nmap <C-j> <Plug>(easymotion-s)
+omap <C-j> <Plug>(easymotion-bd-t)
+vmap <C-j> <Plug>(easymotion-bd-t)
