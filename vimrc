@@ -107,6 +107,7 @@ nnoremap <leader>v :set invpaste paste?<CR>
 nnoremap <Leader>b :<C-u>ls<cr>:b
 nnoremap <Leader>bp :<C-u>bp<cr>
 nnoremap <Leader>bn :<C-u>bn<cr>
+nnoremap <Leader>w :<C-u>bw<cr>
 
 " Plugins Settings
 
