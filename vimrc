@@ -124,3 +124,13 @@ let g:ctrlp_user_command = 'find %s -type f'
 nmap <C-j> <Plug>(easymotion-s)
 omap <C-j> <Plug>(easymotion-bd-t)
 vmap <C-j> <Plug>(easymotion-bd-t)
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
