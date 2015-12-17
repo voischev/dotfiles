@@ -108,7 +108,9 @@ nnoremap <Leader>b :<C-u>ls<cr>:b
 nnoremap <Leader>bp :<C-u>bp<cr>
 nnoremap <Leader>bn :<C-u>bn<cr>
 
+" Plugins Settings
 
+" NerdTREE
 map <C-n> :NERDTreeToggle<CR>
 "autocmd vimenter * NERDTree
 let NERDTreeShowHidden=1
@@ -116,11 +118,16 @@ let NERDTreeMinimalUI=1
 let NERDTreeQuitOnOpen=1
 let NERDTreeKeepTreeInNewTab=1
 
-let g:ctrlp_working_path_mode='a'
-set wildignore+=**/bower_components/*,**/node_modules/*
-let g:ctrlp_user_command = 'find %s -type f'
+" CtrlP
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.git|node_modules|bower_components|build)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
 
-" jump to
+set wildignore+=**/bower_components/*,**/node_modules/*
+
+" Jump to (Easymotion)
 nmap <C-j> <Plug>(easymotion-s)
 omap <C-j> <Plug>(easymotion-bd-t)
 vmap <C-j> <Plug>(easymotion-bd-t)
