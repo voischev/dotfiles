@@ -1,3 +1,51 @@
+" Vundle
+
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+
+Plugin 'andreasvc/vim-256noir'
+Plugin 'nelstrom/vim-mac-classic-theme'
+Plugin 'w0ng/vim-hybrid'
+Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-repeat'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'gorkunov/smartpairs.vim'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'mileszs/ack.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'pangloss/vim-javascript'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
 " settings
 syntax enable
 set encoding=utf-8
@@ -30,6 +78,9 @@ set list
 set listchars=tab:→\ ,trail:·,extends:❯,precedes:❮,nbsp:×
 set laststatus=2
 set statusline=#%n:\%t\ %m\ %{&fileencoding}\ %Y\ %3.3(%c%)\ %3.9(%l/%L%)\ %<
+set background=dark
+colorscheme hybrid
+
 set wrap
 set linebreak
 set visualbell
@@ -65,7 +116,6 @@ map <Leader>n :e <C-R>=escape(expand("%:p:h"),' ') . '/'<CR>
 
 " paste mode
 set pastetoggle=<Leader>p
-"nnoremap <leader>v :set invpaste paste?<CR>
 
 " buffers
 nnoremap <Leader>b :<C-u>ls<cr>:b
@@ -77,33 +127,15 @@ autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 
-set wildcharm=<TAB>
-
-"Automatically removing all trailing whitespace
+" Automatically removing all trailing whitespace
 autocmd BufWritePre *.js :%s/\s\+$//e
 
 autocmd BufRead,BufNewFile *.bemhtml set ft=javascript
 autocmd BufRead,BufNewFile *.bemtree set ft=javascript
 
-" Vundle
+" Plugins settings
 
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-
-Plugin 'scrooloose/nerdtree'
+" NerdTREE
     map <C-n> :NERDTreeToggle<CR>
     "autocmd vimenter * NERDTree
     autocmd StdinReadPre * let s:std_in=1
@@ -114,26 +146,23 @@ Plugin 'scrooloose/nerdtree'
     let NERDTreeKeepTreeInNewTab=1
     let NERDTreeWinSize=40
     let NERDTreeIgnore=['.DS_Store']
-Plugin 'kien/ctrlp.vim'
+" CtrlP
     let g:ctrlp_custom_ignore = {
     \ 'dir':  '\v[\/](\.git|node_modules|bower_components|build)$',
     \ 'file': '\v\.(exe|so|dll)$',
     \ 'link': 'some_bad_symbolic_links',
     \ }
 
-Plugin 'tpope/vim-repeat'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'gorkunov/smartpairs.vim'
-Plugin 'Lokaltog/vim-easymotion'
+" Easymotion
     nmap <C-j> <Plug>(easymotion-s)
     omap <C-j> <Plug>(easymotion-bd-t)
     vmap <C-j> <Plug>(easymotion-bd-t)
-Plugin 'tpope/vim-surround'
-Plugin 'scrooloose/nerdcommenter'
+
+" Nerdcommenter
     let NERDSpaceDelims=1
     let NERDRemoveExtraSpaces=1
-Plugin 'mileszs/ack.vim'
-Plugin 'scrooloose/syntastic'
+
+" Syntastic
     set statusline+=%#warningmsg#
     set statusline+=%{SyntasticStatuslineFlag()}
     set statusline+=%*
@@ -151,20 +180,3 @@ Plugin 'scrooloose/syntastic'
     " nmap <silent> [ :lprev<cr>
     " " next syntastic error
     " nmap <silent> ] :lnext<cr>"
-Plugin 'pangloss/vim-javascript'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
