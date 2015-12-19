@@ -38,24 +38,25 @@
 		"CVS",
 		".libs-*"
 	],
-	"index_exclude_patterns": [
+	"font_size": 13.0,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"indent_to_bracket": true,
+	"index_exclude_patterns":
+	[
 		"*.log",
 		"node_modules/*",
 		"bower_components/*",
 		"libs/*"
 	],
-	"font_size": 13.0,
-	"highlight_line": true,
-	"highlight_modified_tabs": true,
-	"indent_to_bracket": true,
 	"line_padding_bottom": 3,
 	"line_padding_top": 3,
 	"margin": 0,
+	"material_theme_contrast_mode": true,
 	"material_theme_disable_folder_animation": true,
 	"material_theme_disable_tree_indicator": true,
 	"material_theme_small_statusbar": true,
 	"material_theme_small_tab": true,
-	"material_theme_contrast_mode": true,
 	"open_files_in_new_window": false,
 	"overlay_scroll_bars": "enabled",
 	"rulers":
