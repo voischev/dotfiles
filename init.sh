@@ -4,6 +4,7 @@
 brew update
 # Install more recent versions of some OS X tools
 brew install vim --override-system-vi
+brew install ack
 brew install node
 brew install tree
 

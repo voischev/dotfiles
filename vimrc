@@ -1,51 +1,8 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-
-Plugin 'scrooloose/nerdtree'
-Plugin 'kien/ctrlp.vim'
-Plugin 'tpope/vim-repeat'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'gorkunov/smartpairs.vim'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'tpope/vim-surround'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'scrooloose/syntastic'
-Plugin 'pangloss/vim-javascript'
-" Plugin 'plasticboy/vim-markdown'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
 " settings
 syntax enable
 set encoding=utf-8
 set fileformat=unix
+set t_Co=256
 set title
 set number
 set colorcolumn=80
@@ -53,8 +10,11 @@ set showcmd
 set hidden
 set history=1000
 set backspace=indent,eol,start
-" set backupdir=~/.tmp
-" set directory=~/.tmp
+set iskeyword+=-
+set wildmenu
+set wildignore+=.git,.svn
+set wildignore+=*/bower_components/*,*/node_modules/*
+set eol
 
 " indents
 set autoindent
@@ -72,10 +32,7 @@ set laststatus=2
 set statusline=#%n:\%t\ %m\ %{&fileencoding}\ %Y\ %3.3(%c%)\ %3.9(%l/%L%)\ %<
 set wrap
 set linebreak
-set t_Co=256
 set visualbell
-set background=dark
-colorscheme solarized
 
 " search
 set incsearch
@@ -97,11 +54,18 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
+" Navigate with <Ctrl>-hjkl in Insert mode
+inoremap <C-h> <C-o>h
+inoremap <C-j> <C-o>j
+inoremap <C-k> <C-o>k
+inoremap <C-l> <C-o>l
+
 " create/open file in current folder
 map <Leader>n :e <C-R>=escape(expand("%:p:h"),' ') . '/'<CR>
 
 " paste mode
-nnoremap <leader>v :set invpaste paste?<CR>
+set pastetoggle=<Leader>p
+"nnoremap <leader>v :set invpaste paste?<CR>
 
 " buffers
 nnoremap <Leader>b :<C-u>ls<cr>:b
@@ -109,36 +73,98 @@ nnoremap <Leader>bp :<C-u>bp<cr>
 nnoremap <Leader>bn :<C-u>bn<cr>
 nnoremap <Leader>w :<C-u>bw<cr>
 
-" Plugins Settings
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 
-" NerdTREE
-map <C-n> :NERDTreeToggle<CR>
-"autocmd vimenter * NERDTree
-let NERDTreeShowHidden=1
-let NERDTreeMinimalUI=1
-let NERDTreeQuitOnOpen=1
-let NERDTreeKeepTreeInNewTab=1
+set wildcharm=<TAB>
 
-" CtrlP
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.git|node_modules|bower_components|build)$',
-  \ 'file': '\v\.(exe|so|dll)$',
-  \ 'link': 'some_bad_symbolic_links',
-  \ }
+"Automatically removing all trailing whitespace
+autocmd BufWritePre *.js :%s/\s\+$//e
 
-set wildignore+=**/bower_components/*,**/node_modules/*
+autocmd BufRead,BufNewFile *.bemhtml set ft=javascript
+autocmd BufRead,BufNewFile *.bemtree set ft=javascript
 
-" Jump to (Easymotion)
-nmap <C-j> <Plug>(easymotion-s)
-omap <C-j> <Plug>(easymotion-bd-t)
-vmap <C-j> <Plug>(easymotion-bd-t)
+" Vundle
 
-" Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+
+Plugin 'scrooloose/nerdtree'
+    map <C-n> :NERDTreeToggle<CR>
+    "autocmd vimenter * NERDTree
+    autocmd StdinReadPre * let s:std_in=1
+    autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+    let NERDTreeShowHidden=1
+    let NERDTreeMinimalUI=1
+    let NERDTreeQuitOnOpen=1
+    let NERDTreeKeepTreeInNewTab=1
+    let NERDTreeWinSize=40
+    let NERDTreeIgnore=['.DS_Store']
+Plugin 'kien/ctrlp.vim'
+    let g:ctrlp_custom_ignore = {
+    \ 'dir':  '\v[\/](\.git|node_modules|bower_components|build)$',
+    \ 'file': '\v\.(exe|so|dll)$',
+    \ 'link': 'some_bad_symbolic_links',
+    \ }
+
+Plugin 'tpope/vim-repeat'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'gorkunov/smartpairs.vim'
+Plugin 'Lokaltog/vim-easymotion'
+    nmap <C-j> <Plug>(easymotion-s)
+    omap <C-j> <Plug>(easymotion-bd-t)
+    vmap <C-j> <Plug>(easymotion-bd-t)
+Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/nerdcommenter'
+    let NERDSpaceDelims=1
+    let NERDRemoveExtraSpaces=1
+Plugin 'mileszs/ack.vim'
+Plugin 'scrooloose/syntastic'
+    set statusline+=%#warningmsg#
+    set statusline+=%{SyntasticStatuslineFlag()}
+    set statusline+=%*
+
+    let g:syntastic_always_populate_loc_list = 1
+    let g:syntastic_auto_loc_list = 1
+    let g:syntastic_check_on_open = 1
+    let g:syntastic_check_on_wq = 0
+
+    let g:syntastic_javascript_checkers = ["jshint", "jscs"]
+
+    " open quicfix window with all error found
+    " nmap <silent> <leader>ll :Errors<cr>
+    " " previous syntastic error
+    " nmap <silent> [ :lprev<cr>
+    " " next syntastic error
+    " nmap <silent> ] :lnext<cr>"
+Plugin 'pangloss/vim-javascript'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
