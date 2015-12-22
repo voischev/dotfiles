@@ -30,6 +30,9 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'mileszs/ack.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'pangloss/vim-javascript'
+Plugin 'Dimercel/todo-vim'
+" Plugin 'tpope/vim-fugitive'
+" Plugin 'terryma/vim-multiple-cursors'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -67,6 +70,9 @@ set eol
 " indents
 set autoindent
 set smartindent
+set smarttab
+set smartcase
+set ignorecase
 set shiftwidth=4
 set expandtab
 set tabstop=4
@@ -75,7 +81,7 @@ set softtabstop=4
 " theme scheme
 set cursorline
 set list
-set listchars=tab:→\ ,trail:·,extends:❯,precedes:❮,nbsp:×
+set listchars=tab:→\ ,trail:·,eol:¬,extends:❯,precedes:❮,nbsp:×
 set laststatus=2
 set statusline=#%n:\%t\ %m\ %{&fileencoding}\ %Y\ %3.3(%c%)\ %3.9(%l/%L%)\ %<
 set background=dark
@@ -165,6 +171,9 @@ autocmd BufRead,BufNewFile *.bemtree set ft=javascript
 " Nerdcommenter
     let NERDSpaceDelims=1
     let NERDRemoveExtraSpaces=1
+
+" Todo
+let g:todo_winheight = 10
 
 " Syntastic
     set statusline+=%#warningmsg#
