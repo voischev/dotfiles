@@ -138,10 +138,9 @@ autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 
 " Automatically removing all trailing whitespace
-autocmd BufWritePre *.js :%s/\s\+$//e
+autocmd BufWritePre *.{js,c} :%s/\s\+$//e
 
-autocmd BufRead,BufNewFile *.bemhtml set ft=javascript
-autocmd BufRead,BufNewFile *.bemtree set ft=javascript
+autocmd BufRead,BufNewFile *.{bemtree,bemhtml} set ft=javascript
 
 " Plugins settings
 
