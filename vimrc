@@ -175,7 +175,6 @@ autocmd BufRead,BufNewFile *.{bemtree,bemhtml} set ft=javascript
     let g:todo_winheight = 10
     nmap <leader>t :TODOToggle<CR>
 
-
 " Syntastic
     set statusline+=%#warningmsg#
     set statusline+=%{SyntasticStatuslineFlag()}
