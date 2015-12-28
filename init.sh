@@ -27,7 +27,6 @@ export DOTFILES=$HOME/.dotfiles
 
 ln -s $DOTFILES/zshrc           $HOME/.zshrc
 ln -s $DOTFILES/vimrc           $HOME/.vimrc
-ln -s $DOTFILES/vim             $HOME/.vim
 ln -s $DOTFILES/jscsrc          $HOME/.jscsrc
 ln -s $DOTFILES/jshintrc        $HOME/.jshintrc
 ln -s $DOTFILES/jshintignore    $HOME/.jshintignore
