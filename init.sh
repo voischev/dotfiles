@@ -7,6 +7,9 @@ brew install vim --override-system-vi
 brew install ack
 brew install node
 brew install tree
+brew install openssl
+
+brew link openssl --force
 
 # cask
 # brew tap caskroom/versions
