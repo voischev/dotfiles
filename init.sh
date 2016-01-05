@@ -5,8 +5,11 @@ brew update
 # Install more recent versions of some OS X tools
 brew install vim --override-system-vi
 brew install ack
-brew install node
+brew install homebrew/versions/node4-lts
 brew install tree
+brew install openssl
+
+brew link openssl --force
 
 # cask
 # brew tap caskroom/versions
@@ -27,7 +30,6 @@ export DOTFILES=$HOME/.dotfiles
 
 ln -s $DOTFILES/zshrc           $HOME/.zshrc
 ln -s $DOTFILES/vimrc           $HOME/.vimrc
-ln -s $DOTFILES/vim             $HOME/.vim
 ln -s $DOTFILES/jscsrc          $HOME/.jscsrc
 ln -s $DOTFILES/jshintrc        $HOME/.jshintrc
 ln -s $DOTFILES/jshintignore    $HOME/.jshintignore
