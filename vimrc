@@ -20,9 +20,10 @@ Plugin 'andreasvc/vim-256noir'
 Plugin 'nelstrom/vim-mac-classic-theme'
 Plugin 'w0ng/vim-hybrid'
 Plugin 'scrooloose/nerdtree'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-repeat'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'gorkunov/smartpairs.vim'
@@ -207,3 +208,4 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+
