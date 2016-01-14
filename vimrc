@@ -21,6 +21,8 @@ Plugin 'nelstrom/vim-mac-classic-theme'
 Plugin 'w0ng/vim-hybrid'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-repeat'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'gorkunov/smartpairs.vim'
@@ -156,6 +158,7 @@ autocmd BufRead,BufNewFile *.{bemtree,bemhtml} set ft=javascript
     let NERDTreeKeepTreeInNewTab=1
     let NERDTreeWinSize=40
     let NERDTreeIgnore=['.DS_Store']
+
 " CtrlP
     let g:ctrlp_custom_ignore = {
     \ 'dir':  '\v[\/](\.git|node_modules|bower_components|build)$',
@@ -194,3 +197,13 @@ autocmd BufRead,BufNewFile *.{bemtree,bemhtml} set ft=javascript
     " nmap <silent> [ :lprev<cr>
     " " next syntastic error
     " nmap <silent> ] :lnext<cr>"
+
+" ultisnips
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
