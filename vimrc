@@ -69,6 +69,7 @@ set history=1000
 set backspace=indent,eol,start
 set iskeyword+=-
 set wildmenu
+set wildmode=list:longest,full
 set wildignore+=.git,.svn
 set wildignore+=*/bower_components/*,*/node_modules/*
 set eol
@@ -84,7 +85,7 @@ set expandtab
 set tabstop=4
 set softtabstop=4
 
-" theme scheme
+" color scheme
 set cursorline
 set list
 set listchars=tab:→\ ,trail:·,eol:¬,extends:❯,precedes:❮,nbsp:×
@@ -95,6 +96,10 @@ colorscheme hybrid
 
 set wrap
 set linebreak
+" Show ↪ at the beginning of wrapped lines
+if has("linebreak")
+    let &sbr = nr2char(8618).' '
+endif
 set visualbell
 
 " search
@@ -123,6 +128,9 @@ inoremap <C-j> <C-o>j
 inoremap <C-k> <C-o>k
 inoremap <C-l> <C-o>l
 
+" Clear the search highlight in Normal mode
+nnoremap <silent> <Esc><Esc> :nohlsearch<CR><Esc>
+
 " create/open file in current folder
 map <Leader>n :e <C-R>=escape(expand("%:p:h"),' ') . '/'<CR>
 
@@ -133,11 +141,74 @@ set pastetoggle=<Leader>p
 nnoremap <leader>r :<C-u>%s//<left>
 vnoremap <leader>r :s//<left>
 
+" Fast grep
+" Recursive search in current directory for matches with current word
+nnoremap <Leader>f :<C-u>execute "Ack " . expand("<cword>") <Bar> cw<CR>
+
+" Move lines
+" Move one line
+nnoremap <C-S-j> ddp
+nnoremap <C-S-k> ddkP
+" Move selected lines
+" See http://www.vim.org/scripts/script.php?script_id=1590
+vnoremap <C-S-k> xkP'[V']
+vnoremap <C-S-j> xp'[V']
+
+" <Space> = <PageDown>
+nnoremap <Space> <PageDown>
+
+" n и N
+" Search matches are always in center
+nnoremap n nzz
+nnoremap N Nzz
+nnoremap * *zz
+nnoremap # #zz
+nnoremap g* g*zz
+nnoremap g# g#zz
+
+" Navigate through wrapped lines
+noremap j gj
+noremap k gk
+
+" gf
+" Open file under cursor in a new vertical split
+nnoremap gf :<C-u>vertical wincmd f<CR>
+
+" ,c
+" camelCase => camel_case
+vnoremap <silent> <Leader>c :s/\v\C(([a-z]+)([A-Z]))/\2_\l\3/g<CR>
+
+ " ,u
+" Change case to uppercase
+nnoremap <Leader>u gUiw
+inoremap <Leader>u <esc>gUiwea
+
 " buffers
 nnoremap <Leader>b :<C-u>ls<cr>:b
 nnoremap <Leader>bp :<C-u>bp<cr>
 nnoremap <Leader>bn :<C-u>bn<cr>
 nnoremap <Leader>w :<C-u>bw<cr>
+
+" ,b
+" In Visual mode exec git blame with selected text
+vnoremap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
+
+" Load previous session
+" Only available when compiled with the +viminfo feature
+set viminfo='10,\"100,:20,%,n~/.viminfo
+" Set cursor to its last position
+au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+
+
+" AutoReload .vimrc
+" See http://vimcasts.org/episodes/updating-your-vimrc-file-on-the-fly/
+" Source the vimrc file after saving it
+if has("autocmd")
+	autocmd! bufwritepost .vimrc source $MYVIMRC
+endif
+
+" Auto change the directory to the current file I'm working on
+autocmd BufEnter * lcd %:p:h
 
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
@@ -170,9 +241,9 @@ autocmd BufRead,BufNewFile *.{bemtree,bemhtml} set ft=javascript
     \ }
 
 " Easymotion
-    nmap <C-j> <Plug>(easymotion-s)
-    omap <C-j> <Plug>(easymotion-bd-t)
-    vmap <C-j> <Plug>(easymotion-bd-t)
+    nmap <leader>m <Plug>(easymotion-s)
+    omap <leader>m <Plug>(easymotion-bd-t)
+    vmap <leader>m <Plug>(easymotion-bd-t)
 
 " Nerdcommenter
     let NERDSpaceDelims=1
@@ -201,8 +272,8 @@ autocmd BufRead,BufNewFile *.{bemtree,bemhtml} set ft=javascript
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsJumpForwardTrigger="<tag>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
