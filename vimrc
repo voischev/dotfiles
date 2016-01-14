@@ -16,27 +16,29 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 
-Plugin 'andreasvc/vim-256noir'
-Plugin 'nelstrom/vim-mac-classic-theme'
-Plugin 'w0ng/vim-hybrid'
-Plugin 'scrooloose/nerdtree'
-Plugin 'ctrlpvim/ctrlp.vim'
+" Plugins
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'mileszs/ack.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'ervandew/supertab'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-repeat'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'gorkunov/smartpairs.vim'
-Plugin 'Lokaltog/vim-easymotion'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'mileszs/ack.vim'
-Plugin 'scrooloose/syntastic'
 Plugin 'pangloss/vim-javascript'
 Plugin 'othree/html5.vim'
-Plugin 'Dimercel/todo-vim'
-Plugin 'tpope/vim-fugitive'
 " Plugin 'terryma/vim-multiple-cursors'
+
+" Color shemes
+Plugin 'w0ng/vim-hybrid'
+Plugin 'andreasvc/vim-256noir'
+Plugin 'nelstrom/vim-mac-classic-theme'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -142,7 +144,7 @@ autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 
 " Automatically removing all trailing whitespace
-autocmd BufWritePre *.{js,c} :%s/\s\+$//e
+autocmd BufWritePre *.{js,c,css} :%s/\s\+$//e
 
 autocmd BufRead,BufNewFile *.{bemtree,bemhtml} set ft=javascript
 
@@ -176,10 +178,6 @@ autocmd BufRead,BufNewFile *.{bemtree,bemhtml} set ft=javascript
     let NERDSpaceDelims=1
     let NERDRemoveExtraSpaces=1
 
-" Todo
-    let g:todo_winheight = 10
-    nmap <leader>t :TODOToggle<CR>
-
 " Syntastic
     set statusline+=%#warningmsg#
     set statusline+=%{SyntasticStatuslineFlag()}
@@ -208,4 +206,3 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
-
