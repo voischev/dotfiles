@@ -7,7 +7,7 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
-call vundle#begin('~/some/path/here')
+call vundle#begin('~/.vim/bundle/')
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
@@ -19,11 +19,12 @@ Plugin 'VundleVim/Vundle.vim'
 " Plugins
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'ervandew/supertab'
+Plugin 'Lokaltog/vim-easymotion'
 Plugin 'mileszs/ack.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'ervandew/supertab'
-Plugin 'Lokaltog/vim-easymotion'
+Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-repeat'
 Plugin 'jiangmiao/auto-pairs'
@@ -67,12 +68,13 @@ set showcmd
 set hidden
 set history=1000
 set backspace=indent,eol,start
+set eol
 set iskeyword+=-
+set wildignore+=.DS_Store,.git,.svn
+set wildignore+=*/bower_components/*,*/node_modules/*
 set wildmenu
 set wildmode=list:longest,full
-set wildignore+=.git,.svn
-set wildignore+=*/bower_components/*,*/node_modules/*
-set eol
+set ofu=syntaxcomplete#Complete
 
 " Cursors
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
@@ -107,6 +109,13 @@ if has("linebreak")
 endif
 set visualbell
 
+" Hard to type things
+iabbrev >> →
+iabbrev << ←
+iabbrev ^^ ↑
+iabbrev VV ↓
+iabbrev aa λ
+
 " search
 set incsearch
 set hlsearch
@@ -118,10 +127,10 @@ set noswapfile
 let mapleader = ","
 
 " Warning: nightmare mode!
-inoremap <Up> <NOP>
-inoremap <Down> <NOP>
-inoremap <Left> <NOP>
-inoremap <Right> <NOP>
+" inoremap <Up> <NOP>
+" inoremap <Down> <NOP>
+" inoremap <Left> <NOP>
+" inoremap <Right> <NOP>
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
@@ -134,17 +143,20 @@ inoremap <C-k> <C-o>k
 inoremap <C-l> <C-o>l
 
 " Clear the search highlight in Normal mode
-nnoremap <silent> <Esc><Esc> :nohlsearch<CR><Esc>
+nnoremap <Silent> <Esc><Esc> :nohlsearch<CR><Esc>
 
 " create/open file in current folder
 map <Leader>n :e <C-R>=escape(expand("%:p:h"),' ') . '/'<CR>
+
+" Open file under cursor in a new vertical split
+nnoremap <Leader>o :<C-u>vertical wincmd f<CR>
 
 " paste mode
 set pastetoggle=<Leader>p
 
 " replase
-nnoremap <leader>r :<C-u>%s//<left>
-vnoremap <leader>r :s//<left>
+nnoremap <Leader>r :<C-u>%s//<Left>
+vnoremap <Leader>r :s//<Left>
 
 " Fast grep
 " Recursive search in current directory for matches with current word
@@ -159,10 +171,6 @@ nnoremap <C-S-k> ddkP
 vnoremap <C-S-k> xkP'[V']
 vnoremap <C-S-j> xp'[V']
 
-" <Space> = <PageDown>
-nnoremap <Space> <PageDown>
-
-" n и N
 " Search matches are always in center
 nnoremap n nzz
 nnoremap N Nzz
@@ -171,46 +179,30 @@ nnoremap # #zz
 nnoremap g* g*zz
 nnoremap g# g#zz
 
-" Navigate through wrapped lines
-noremap j gj
-noremap k gk
-
-" gf
-" Open file under cursor in a new vertical split
-nnoremap gf :<C-u>vertical wincmd f<CR>
-
-" ,c
 " camelCase => camel_case
-vnoremap <silent> <Leader>c :s/\v\C(([a-z]+)([A-Z]))/\2_\l\3/g<CR>
+vnoremap <Silent> <Leader>c :s/\v\C(([a-z]+)([A-Z]))/\2_\l\3/g<CR>
 
  " ,u
 " Change case to uppercase
 nnoremap <Leader>u gUiw
-inoremap <Leader>u <esc>gUiwea
+inoremap <Leader>u <Esc>gUiwea
 
-" buffers
-nnoremap <Leader>b :<C-u>ls<cr>:b
-nnoremap <Leader>bp :<C-u>bp<cr>
-nnoremap <Leader>bn :<C-u>bn<cr>
+" buffers + CtrlP Plugin Buffers
+map <Leader>, <C-^>
+nnoremap <Leader>b :CtrlPBuffer<CR>
+nnoremap <Leader>bl :buffers<cr>
+nnoremap <Leader>bp :bprev<cr>
+nnoremap <Leader>bn :bnext<cr>
 nnoremap <Leader>w :<C-u>bw<cr>
 
-" ,b
 " In Visual mode exec git blame with selected text
-vnoremap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
+vnoremap <Leader>gb :<C-u>!git blame <C-u>=expand("%:p") <CR> \| sed -n <C-r>=line("'<") <CR>,<C-r>=line("'>") <CR>p <CR>
 
 " Load previous session
 " Only available when compiled with the +viminfo feature
 set viminfo='10,\"100,:20,%,n~/.viminfo
 " Set cursor to its last position
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
-
-
-" AutoReload .vimrc
-" See http://vimcasts.org/episodes/updating-your-vimrc-file-on-the-fly/
-" Source the vimrc file after saving it
-if has("autocmd")
-	autocmd! bufwritepost .vimrc source $MYVIMRC
-endif
 
 " Auto change the directory to the current file I'm working on
 autocmd BufEnter * lcd %:p:h
@@ -221,7 +213,6 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 
 " Automatically removing all trailing whitespace
 autocmd BufWritePre *.{js,c,css} :%s/\s\+$//e
-
 autocmd BufRead,BufNewFile *.{bemtree,bemhtml} set ft=javascript
 
 " Plugins settings
@@ -239,6 +230,9 @@ autocmd BufRead,BufNewFile *.{bemtree,bemhtml} set ft=javascript
     let NERDTreeIgnore=['.DS_Store']
 
 " CtrlP
+    let g:ctrlp_clear_cache_on_exit = 0
+    let g:ctrlp_lazy_update = 350
+    let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch'  }
     let g:ctrlp_custom_ignore = {
     \ 'dir':  '\v[\/](\.git|node_modules|bower_components|build)$',
     \ 'file': '\v\.(exe|so|dll)$',
@@ -246,9 +240,9 @@ autocmd BufRead,BufNewFile *.{bemtree,bemhtml} set ft=javascript
     \ }
 
 " Easymotion
-    nmap <leader>m <Plug>(easymotion-s)
-    omap <leader>m <Plug>(easymotion-bd-t)
-    vmap <leader>m <Plug>(easymotion-bd-t)
+    nmap <Leader>m <Plug>(easymotion-s)
+    omap <Leader>m <Plug>(easymotion-bd-t)
+    vmap <Leader>m <Plug>(easymotion-bd-t)
 
 " Nerdcommenter
     let NERDSpaceDelims=1
@@ -261,24 +255,24 @@ autocmd BufRead,BufNewFile *.{bemtree,bemhtml} set ft=javascript
 
     let g:syntastic_always_populate_loc_list = 1
     let g:syntastic_auto_loc_list = 1
-    let g:syntastic_check_on_open = 1
+    let g:syntastic_check_on_open = 0
     let g:syntastic_check_on_wq = 0
 
     let g:syntastic_javascript_checkers = ["jshint", "jscs"]
 
     " open quicfix window with all error found
-    " nmap <silent> <leader>ll :Errors<cr>
+    " nmap <Silent> <Leader>ll :Errors<cr>
     " " previous syntastic error
-    " nmap <silent> [ :lprev<cr>
+    " nmap <Silent> [ :lprev<cr>
     " " next syntastic error
-    " nmap <silent> ] :lnext<cr>"
+    " nmap <Silent> ] :lnext<cr>"
 
 " ultisnips
 
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tag>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+" Trigger configuration. Do not use <Tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<Tab>"
+let g:UltiSnipsJumpForwardTrigger="<Tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
