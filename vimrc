@@ -24,6 +24,7 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'mileszs/ack.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'tacahiroy/ctrlp-funky'
 Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-repeat'
@@ -62,6 +63,8 @@ set encoding=utf-8
 set fileformat=unix
 set t_Co=256
 set title
+" Don't show the intro message starting Vim
+set shortmess+=I
 set number
 set colorcolumn=80
 set showcmd
@@ -158,9 +161,18 @@ set pastetoggle=<Leader>p
 nnoremap <Leader>r :<C-u>%s//<Left>
 vnoremap <Leader>r :s//<Left>
 
+" Find in file
+nnoremap <Leader>f :CtrlPLine<CR>
+
 " Fast grep
 " Recursive search in current directory for matches with current word
-nnoremap <Leader>f :<C-u>execute "Ack " . expand("<cword>") <Bar> cw<CR>
+nnoremap <Leader>F :<C-u>execute "Ack " . expand("<cword>") <Bar> cw<CR>
+
+" Jump definition
+map <Leader>d :CtrlPFunky<CR>
+
+" File History
+map <Leader>h :CtrlPMRUFiles<CR>
 
 " Move lines
 " Move one line
@@ -221,7 +233,7 @@ autocmd BufRead,BufNewFile *.{bemtree,bemhtml} set ft=javascript
     map <C-n> :NERDTreeToggle<CR>
     "autocmd vimenter * NERDTree
     autocmd StdinReadPre * let s:std_in=1
-    autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+    " autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
     let NERDTreeShowHidden=1
     let NERDTreeMinimalUI=1
     let NERDTreeQuitOnOpen=1
