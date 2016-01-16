@@ -27,7 +27,9 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tacahiroy/ctrlp-funky'
 Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'scrooloose/nerdtree'
+Plugin 'matze/vim-move'
 Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-unimpaired'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'gorkunov/smartpairs.vim'
 Plugin 'tpope/vim-surround'
@@ -78,6 +80,8 @@ set wildignore+=*/bower_components/*,*/node_modules/*
 set wildmenu
 set wildmode=list:longest,full
 set ofu=syntaxcomplete#Complete
+set completeopt=menu
+set path=.,,**
 
 " Cursors
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
@@ -173,15 +177,6 @@ map <Leader>d :CtrlPFunky<CR>
 
 " File History
 map <Leader>h :CtrlPMRUFiles<CR>
-
-" Move lines
-" Move one line
-nnoremap <C-S-j> ddp
-nnoremap <C-S-k> ddkP
-" Move selected lines
-" See http://www.vim.org/scripts/script.php?script_id=1590
-vnoremap <C-S-k> xkP'[V']
-vnoremap <C-S-j> xp'[V']
 
 " Search matches are always in center
 nnoremap n nzz
@@ -281,10 +276,13 @@ autocmd BufRead,BufNewFile *.{bemtree,bemhtml} set ft=javascript
 
 " ultisnips
 
-" Trigger configuration. Do not use <Tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<Tab>"
-let g:UltiSnipsJumpForwardTrigger="<Tab>"
-let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
+    " Trigger configuration. Do not use <Tab> if you use https://github.com/Valloric/YouCompleteMe.
+    let g:UltiSnipsExpandTrigger="<Tab>"
+    let g:UltiSnipsJumpForwardTrigger="<Tab>"
+    let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
 
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
+    " If you want :UltiSnipsEdit to split your window.
+    let g:UltiSnipsEditSplit="vertical"
+
+" vim-move
+    let g:move_key_modifier = 'C'
