@@ -189,7 +189,6 @@ nnoremap g# g#zz
 " camelCase => camel_case
 vnoremap <Silent> <Leader>c :s/\v\C(([a-z]+)([A-Z]))/\2_\l\3/g<CR>
 
- " ,u
 " Change case to uppercase
 nnoremap <Leader>u gUiw
 inoremap <Leader>u <Esc>gUiwea
@@ -240,11 +239,7 @@ autocmd BufRead,BufNewFile *.{bemtree,bemhtml} set ft=javascript
     let g:ctrlp_clear_cache_on_exit = 0
     let g:ctrlp_lazy_update = 350
     let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch'  }
-    let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\v[\/](\.git|node_modules|bower_components|build)$',
-    \ 'file': '\v\.(exe|so|dll)$',
-    \ 'link': 'some_bad_symbolic_links',
-    \ }
+    let g:ctrlp_show_hidden = 1
 
 " Easymotion
     nmap <Leader>m <Plug>(easymotion-s)
