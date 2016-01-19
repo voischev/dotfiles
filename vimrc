@@ -224,6 +224,10 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd BufWritePre *.{js,c,css} :%s/\s\+$//e
 autocmd BufRead,BufNewFile *.{bemtree,bemhtml} set ft=javascript
 
+" Resize splits when the window is resized
+" Only available for GUI
+au VimResized * exe "normal! \<c-w>="
+
 " Plugins settings
 
 " NerdTREE
