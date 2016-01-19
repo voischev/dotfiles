@@ -74,7 +74,7 @@ set hidden
 set history=1000
 set backspace=indent,eol,start
 set eol
-set mouse=a
+" set mouse=a
 set scrolloff=30
 set iskeyword+=-
 set wildignore+=.DS_Store,.git,.svn
