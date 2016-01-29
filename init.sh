@@ -36,6 +36,9 @@ ln -s $DOTFILES/jshintignore    $HOME/.jshintignore
 ln -s $DOTFILES/gitignore       $HOME/.gitignore
 ln -s $DOTFILES/gitconfig       $HOME/.gitconfig
 
+# GIT configuration
+git config --global core.excludesfile ~/.gitignore
+
 # Sublime Text init
 cd $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/
 rm -rf User

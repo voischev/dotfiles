@@ -3,6 +3,7 @@
     email = voischev.ivan@ya.ru
 [core]
     editor = vim
+	excludesfile = /Users/voischev/.gitignore
 [merge]
     tool = vimdiff
 [push]
