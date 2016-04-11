@@ -239,7 +239,7 @@ au VimResized * exe "normal! \<c-w>="
     let NERDTreeMinimalUI=1
     let NERDTreeQuitOnOpen=1
     let NERDTreeKeepTreeInNewTab=1
-    let NERDTreeWinSize=40
+    let NERDTreeWinSize=60
     let NERDTreeIgnore=['.DS_Store']
 
 " CtrlP
