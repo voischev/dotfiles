@@ -80,15 +80,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+alias disk="open ~/Yandex.Disk.localized"
 
 # Notes
-
 create_note() {
-    subl ~/Yandex.Disk.localized/Notes/$1.txt
+    vim ~/Yandex.Disk.localized/Notes/$1.txt
 }
 alias note=create_note
 
-export NVM_DIR="/Users/voischev/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+

@@ -8,7 +8,7 @@ brew install ack
 brew install homebrew/versions/node4-lts
 brew install tree
 brew install openssl
-brew install mongodb
+# brew install mongodb
 
 brew link openssl --force
 
