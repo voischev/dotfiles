@@ -35,15 +35,14 @@ ln -s $DOTFILES/jscsrc          $HOME/.jscsrc
 ln -s $DOTFILES/jshintrc        $HOME/.jshintrc
 ln -s $DOTFILES/jshintignore    $HOME/.jshintignore
 ln -s $DOTFILES/gitignore       $HOME/.gitignore
-ln -s $DOTFILES/gitconfig       $HOME/.gitconfig
 
 # GIT configuration
 git config --global core.excludesfile ~/.gitignore
 
 # Sublime Text init
-cd $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/
-rm -rf User
-ln -s $DOTFILES/sublime User
+# cd $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/
+# rm -rf User
+# ln -s $DOTFILES/sublime User
 
 # OSX
 ## [For Vintage Mode](http://www.sublimetext.com/docs/3/vintage.html)
