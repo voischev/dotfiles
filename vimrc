@@ -238,7 +238,7 @@ autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 
 " Automatically removing all trailing whitespace
-autocmd BufWritePre *.{js,c,css} :%s/\s\+$//e
+autocmd BufWritePre *.{bemhtml,bemtree,js,c,css} :%s/\s\+$//e
 autocmd BufRead,BufNewFile *.{bemtree,bemhtml} set ft=javascript
 
 " Resize splits when the window is resized
