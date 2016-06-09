@@ -123,7 +123,7 @@ function! FileSize()
 endfunction
 
 set statusline=#%n:\%t\ %m
-" set statusline+=\ \ %{fugitive\#statusline()}
+set statusline+=%{fugitive\#statusline()}
 set statusline+=\ \ %Y
 set statusline+=\ \ %3.3(%c%)\ %3.9(%l/%L%)
 set statusline+=\ \ %{FileSize()}
