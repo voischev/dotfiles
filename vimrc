@@ -122,11 +122,12 @@ function! FileSize()
     endif
 endfunction
 
-set statusline=#%n:\%t\ %m\ %{&fileencoding}
-set statusline+=\ \ %Y\ %3.3(%c%)\ %3.9(%l/%L%)
-set statusline+=%<
+set statusline=#%n:\%t\ %m
+" set statusline+=%{fugitive\#statusline()}
+set statusline+=\ \ %Y
+set statusline+=\ \ %3.3(%c%)\ %3.9(%l/%L%)
 set statusline+=\ \ %{FileSize()}
-set statusline+=%<
+set statusline+=\ \ %{&fileencoding}
 
 set wrap
 set linebreak
