@@ -107,9 +107,26 @@ set cursorline
 set list
 set listchars=tab:→\ ,trail:·,eol:¬,extends:❯,precedes:❮,nbsp:×
 set laststatus=2
-set statusline=#%n:\%t\ %m\ %{&fileencoding}\ %Y\ %3.3(%c%)\ %3.9(%l/%L%)\ %<
 set background=dark
 colorscheme hybrid
+
+function! FileSize()
+    let bytes = getfsize(expand("%:p"))
+    if bytes <= 0
+        return ""
+    endif
+    if bytes < 1024
+        return bytes . "B"
+    else
+        return (bytes / 1024) . "K"
+    endif
+endfunction
+
+set statusline=#%n:\%t\ %m\ %{&fileencoding}
+set statusline+=\ \ %Y\ %3.3(%c%)\ %3.9(%l/%L%)
+set statusline+=%<
+set statusline+=\ \ %{FileSize()}
+set statusline+=%<
 
 set wrap
 set linebreak
