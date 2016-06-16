@@ -33,10 +33,7 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'gorkunov/smartpairs.vim'
 Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'pangloss/vim-javascript'
-Plugin 'othree/html5.vim'
 " Plugin 'terryma/vim-multiple-cursors'
 
 " Color shemes
@@ -123,7 +120,6 @@ function! FileSize()
 endfunction
 
 set statusline=#%n:\%t\ %m
-set statusline+=%{fugitive\#statusline()}
 set statusline+=\ \ %Y
 set statusline+=\ \ %3.3(%c%)\ %3.9(%l/%L%)
 set statusline+=\ \ %{FileSize()}
