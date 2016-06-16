@@ -23,13 +23,10 @@ brew link openssl --force
 # Remove outdated versions from the cellar.
 brew cleanup
 
-# oh-my-zsh
-curl -L http://install.ohmyz.sh | sh
-
 # Dotfiles init
 export DOTFILES=$HOME/.dotfiles
 
-ln -s $DOTFILES/zshrc           $HOME/.zshrc
+ln -s $DOTFILES/profile         $HOME/.profile
 ln -s $DOTFILES/vimrc           $HOME/.vimrc
 ln -s $DOTFILES/jscsrc          $HOME/.jscsrc
 ln -s $DOTFILES/jshintrc        $HOME/.jshintrc
