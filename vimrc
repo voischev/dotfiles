@@ -22,7 +22,6 @@ Plugin 'honza/vim-snippets'
 Plugin 'ervandew/supertab'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'mileszs/ack.vim'
-Plugin 'scrooloose/syntastic'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tacahiroy/ctrlp-funky'
 Plugin 'FelikZ/ctrlp-py-matcher'
@@ -78,7 +77,6 @@ set wildignore+=.DS_Store,.git,.svn
 set wildignore+=*/bower_components/*,*/node_modules/*
 set wildmenu
 set wildmode=list:longest,full
-set ofu=syntaxcomplete#Complete
 set completeopt=menu
 set path=.,,**
 
@@ -270,25 +268,6 @@ au VimResized * exe "normal! \<c-w>="
 " Nerdcommenter
     let NERDSpaceDelims=1
     let NERDRemoveExtraSpaces=1
-
-" Syntastic
-    set statusline+=%#warningmsg#
-    set statusline+=%{SyntasticStatuslineFlag()}
-    set statusline+=%*
-
-    let g:syntastic_always_populate_loc_list = 1
-    let g:syntastic_auto_loc_list = 1
-    let g:syntastic_check_on_open = 0
-    let g:syntastic_check_on_wq = 0
-
-    let g:syntastic_javascript_checkers = ["jshint", "jscs"]
-
-    " open quicfix window with all error found
-    " nmap <Silent> <Leader>ll :Errors<cr>
-    " " previous syntastic error
-    " nmap <Silent> [ :lprev<cr>
-    " " next syntastic error
-    " nmap <Silent> ] :lnext<cr>"
 
 " ultisnips
 
