@@ -6,6 +6,7 @@ export EDITOR='vim'
 alias gst="git status"
 alias ga="git add"
 alias gc="git commit"
+alias gco="git checkout"
 
 alias disk="open ~/Yandex.Disk.localized"
 
