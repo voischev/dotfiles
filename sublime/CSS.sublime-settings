@@ -1,8 +1,0 @@
-{
-    "extensions":
-    [
-        "styl",
-        "pcss"
-    ],
-    "hayaku_CSS_prefixes_disable": true
-}

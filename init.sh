@@ -7,18 +7,6 @@ brew install vim --override-system-vi
 brew install ack
 brew install homebrew/versions/node4-lts
 brew install tree
-brew install openssl
-# brew install mongodb
-
-brew link openssl --force
-
-# cask
-# brew tap caskroom/versions
-# brew tap caskroom/versions
-# brew install caskroom/cask/brew-cask
-
-# brew cask install sublime-text
-# brew cask install iterm2
 
 # Remove outdated versions from the cellar.
 brew cleanup
@@ -26,6 +14,10 @@ brew cleanup
 # Dotfiles init
 export DOTFILES=$HOME/.dotfiles
 
+# VIM
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+# Configs
 ln -s $DOTFILES/profile         $HOME/.profile
 ln -s $DOTFILES/vimrc           $HOME/.vimrc
 ln -s $DOTFILES/jscsrc          $HOME/.jscsrc
@@ -35,12 +27,3 @@ ln -s $DOTFILES/gitignore       $HOME/.gitignore
 
 # GIT configuration
 git config --global core.excludesfile ~/.gitignore
-
-# Sublime Text init
-# cd $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/
-# rm -rf User
-# ln -s $DOTFILES/sublime User
-
-# OSX
-## [For Vintage Mode](http://www.sublimetext.com/docs/3/vintage.html)
-defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
