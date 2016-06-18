@@ -26,4 +26,9 @@ ln -s $DOTFILES/jshintignore    $HOME/.jshintignore
 ln -s $DOTFILES/gitignore       $HOME/.gitignore
 
 # GIT configuration
+git config --global user.name "Ivan Voischev"
+git config --global user.email voischev.ivan@ya.ru
+git config --global core.editor vim
+git config --global merge.tool vimdiff
+git config --global push.default simple
 git config --global core.excludesfile ~/.gitignore
