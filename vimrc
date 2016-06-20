@@ -192,9 +192,6 @@ map <Leader>d :CtrlPFunky<CR>
 " File History
 map <Leader>h :CtrlPMRUFiles<CR>
 
-" Show current directory
-map <C-n> :Ex<CR>
-
 " Search matches are always in center
 nnoremap n nzz
 nnoremap N Nzz
