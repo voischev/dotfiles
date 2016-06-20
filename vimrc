@@ -19,7 +19,6 @@ Plugin 'VundleVim/Vundle.vim'
 " Plugins
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'ervandew/supertab'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'mileszs/ack.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -36,8 +35,6 @@ Plugin 'scrooloose/nerdcommenter'
 
 " Color shemes
 Plugin 'w0ng/vim-hybrid'
-Plugin 'andreasvc/vim-256noir'
-Plugin 'nelstrom/vim-mac-classic-theme'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -240,8 +237,6 @@ autocmd BufRead,BufNewFile *.{bemtree,bemhtml} set ft=javascript
 au VimResized * exe "normal! \<c-w>="
 
 " Plugins settings
-
-
 " CtrlP
     let g:ctrlp_clear_cache_on_exit = 0
     let g:ctrlp_lazy_update = 350
@@ -256,16 +251,6 @@ au VimResized * exe "normal! \<c-w>="
 " Nerdcommenter
     let NERDSpaceDelims=1
     let NERDRemoveExtraSpaces=1
-
-" ultisnips
-
-    " Trigger configuration. Do not use <Tab> if you use https://github.com/Valloric/YouCompleteMe.
-    let g:UltiSnipsExpandTrigger="<Tab>"
-    let g:UltiSnipsJumpForwardTrigger="<Tab>"
-    let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
-
-    " If you want :UltiSnipsEdit to split your window.
-    let g:UltiSnipsEditSplit="vertical"
 
 " vim-move
     let g:move_key_modifier = 'C'
