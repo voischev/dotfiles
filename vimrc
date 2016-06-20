@@ -25,7 +25,6 @@ Plugin 'mileszs/ack.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tacahiroy/ctrlp-funky'
 Plugin 'FelikZ/ctrlp-py-matcher'
-Plugin 'scrooloose/nerdtree'
 Plugin 'matze/vim-move'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-unimpaired'
@@ -193,6 +192,9 @@ map <Leader>d :CtrlPFunky<CR>
 " File History
 map <Leader>h :CtrlPMRUFiles<CR>
 
+" Show current directory
+map <C-n> :Ex<CR>
+
 " Search matches are always in center
 nnoremap n nzz
 nnoremap N Nzz
@@ -242,17 +244,6 @@ au VimResized * exe "normal! \<c-w>="
 
 " Plugins settings
 
-" NerdTREE
-    map <C-n> :NERDTreeToggle<CR>
-    "autocmd vimenter * NERDTree
-    autocmd StdinReadPre * let s:std_in=1
-    " autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-    let NERDTreeShowHidden=1
-    let NERDTreeMinimalUI=1
-    let NERDTreeQuitOnOpen=1
-    let NERDTreeKeepTreeInNewTab=1
-    let NERDTreeWinSize=60
-    let NERDTreeIgnore=['.DS_Store']
 
 " CtrlP
     let g:ctrlp_clear_cache_on_exit = 0
