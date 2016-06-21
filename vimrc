@@ -31,7 +31,6 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'gorkunov/smartpairs.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdcommenter'
-" Plugin 'terryma/vim-multiple-cursors'
 
 " Color shemes
 Plugin 'w0ng/vim-hybrid'
@@ -163,30 +162,31 @@ inoremap <C-l> <C-o>l
 " Clear the search highlight in Normal mode
 nnoremap <Silent> <Esc><Esc> :nohlsearch<CR><Esc>
 
-" create/open file in current folder
+" create/ope[n] file in current folder
 map <Leader>n :e <C-R>=escape(expand("%:p:h"),' ') . '/'<CR>
 
-" Open file under cursor in a new vertical split
+" [O]pen file under cursor in a new vertical split
 nnoremap <Leader>o :<C-u>vertical wincmd f<CR>
 
-" paste mode
+" [p]aste mode
 set pastetoggle=<Leader>p
 
-" replase
+" [r]eplase
 nnoremap <Leader>r :<C-u>%s//<Left>
 vnoremap <Leader>r :s//<Left>
 
-" Find in file
+" [f]ind in file
 nnoremap <Leader>f :CtrlPLine<CR>
 
+" [f]ind [w]ord 
 " Fast grep
 " Recursive search in current directory for matches with current word
-nnoremap <Leader>F :<C-u>execute "Ack " . expand("<cword>") <Bar> cw<CR>
+nnoremap <Leader>fw :<C-u>execute "Ack " . expand("<cword>") <Bar> cw<CR>
 
-" Jump definition
+" Jump [d]efinition
 map <Leader>d :CtrlPFunky<CR>
 
-" File History
+" File [h]istory
 map <Leader>h :CtrlPMRUFiles<CR>
 
 " Search matches are always in center
@@ -204,7 +204,7 @@ vnoremap <Silent> <Leader>c :s/\v\C(([a-z]+)([A-Z]))/\2_\l\3/g<CR>
 nnoremap <Leader>u gUiw
 inoremap <Leader>u <Esc>gUiwea
 
-" buffers + CtrlP Plugin Buffers
+" [b]uffers + CtrlP Plugin Buffers
 map <Leader>, <C-^>
 nnoremap <Leader>b :CtrlPBuffer<CR>
 nnoremap <Leader>bl :buffers<cr>
@@ -212,7 +212,7 @@ nnoremap <Leader>bp :bprev<cr>
 nnoremap <Leader>bn :bnext<cr>
 nnoremap <Leader>w :<C-u>bw<cr>
 
-" In Visual mode exec git blame with selected text
+" In Visual mode exec [g]it [b]lame with selected text
 vnoremap <Leader>gb :<C-u>!git blame <C-u>=expand("%:p") <CR> \| sed -n <C-r>=line("'<") <CR>,<C-r>=line("'>") <CR>p <CR>
 
 " Load previous session
