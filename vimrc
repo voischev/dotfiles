@@ -21,9 +21,6 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'mileszs/ack.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'tacahiroy/ctrlp-funky'
-Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'matze/vim-move'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-unimpaired'
@@ -175,19 +172,10 @@ set pastetoggle=<Leader>p
 nnoremap <Leader>r :<C-u>%s//<Left>
 vnoremap <Leader>r :s//<Left>
 
-" [f]ind in file
-nnoremap <Leader>f :CtrlPLine<CR>
-
 " [f]ind [w]ord 
 " Fast grep
 " Recursive search in current directory for matches with current word
 nnoremap <Leader>fw :<C-u>execute "Ack " . expand("<cword>") <Bar> cw<CR>
-
-" Jump [d]efinition
-map <Leader>d :CtrlPFunky<CR>
-
-" File [h]istory
-map <Leader>h :CtrlPMRUFiles<CR>
 
 " Search matches are always in center
 nnoremap n nzz
@@ -204,10 +192,9 @@ vnoremap <Silent> <Leader>c :s/\v\C(([a-z]+)([A-Z]))/\2_\l\3/g<CR>
 nnoremap <Leader>u gUiw
 inoremap <Leader>u <Esc>gUiwea
 
-" [b]uffers + CtrlP Plugin Buffers
+" [b]uffers
 map <Leader>, <C-^>
-nnoremap <Leader>b :CtrlPBuffer<CR>
-nnoremap <Leader>bl :buffers<cr>
+nnoremap <Leader>b :buffers<cr>
 nnoremap <Leader>bp :bprev<cr>
 nnoremap <Leader>bn :bnext<cr>
 nnoremap <Leader>w :<C-u>bw<cr>
@@ -235,13 +222,6 @@ autocmd BufRead,BufNewFile *.{bemtree,bemhtml} set ft=javascript
 " Resize splits when the window is resized
 " Only available for GUI
 au VimResized * exe "normal! \<c-w>="
-
-" Plugins settings
-" CtrlP
-    let g:ctrlp_clear_cache_on_exit = 0
-    let g:ctrlp_lazy_update = 350
-    let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch'  }
-    let g:ctrlp_show_hidden = 1
 
 " Easymotion
     nmap <Leader>m <Plug>(easymotion-s)
