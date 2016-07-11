@@ -111,10 +111,6 @@ set statusline+=\ \ %{&fileencoding}
 
 set wrap
 set linebreak
-" Show ↪ at the beginning of wrapped lines
-if has("linebreak")
-    let &sbr = nr2char(8618).' '
-endif
 set visualbell
 
 " Hard to type things
