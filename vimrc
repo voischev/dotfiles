@@ -113,13 +113,6 @@ set wrap
 set linebreak
 set visualbell
 
-" Hard to type things
-iabbrev >> →
-iabbrev << ←
-iabbrev ^^ ↑
-iabbrev VV ↓
-iabbrev aa λ
-
 " search
 set incsearch
 set hlsearch
@@ -130,26 +123,7 @@ set noswapfile
 
 let mapleader = ","
 
-" Warning: nightmare mode!
-" inoremap <Up> <NOP>
-" inoremap <Down> <NOP>
-" inoremap <Left> <NOP>
-" inoremap <Right> <NOP>
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
-
-" Navigate with <Ctrl>-hjkl in Insert mode
-inoremap <C-h> <C-o>h
-inoremap <C-j> <C-o>j
-inoremap <C-k> <C-o>k
-inoremap <C-l> <C-o>l
-
-" Clear the search highlight in Normal mode
-nnoremap <Silent> <Esc><Esc> :nohlsearch<CR><Esc>
-
-" create/ope[n] file in current folder
+" [n]ew/ope[n] file in current folder
 map <Leader>n :e <C-R>=escape(expand("%:p:h"),' ') . '/'<CR>
 
 " [O]pen file under cursor in a new vertical split
@@ -161,11 +135,6 @@ set pastetoggle=<Leader>p
 " [r]eplase
 nnoremap <Leader>r :<C-u>%s//<Left>
 vnoremap <Leader>r :s//<Left>
-
-" [f]ind [w]ord 
-" Fast grep
-" Recursive search in current directory for matches with current word
-nnoremap <Leader>fw :<C-u>execute "Ack " . expand("<cword>") <Bar> cw<CR>
 
 " Search matches are always in center
 nnoremap n nzz
@@ -189,17 +158,11 @@ nnoremap <Leader>bp :bprev<cr>
 nnoremap <Leader>bn :bnext<cr>
 nnoremap <Leader>w :<C-u>bw<cr>
 
-" In Visual mode exec [g]it [b]lame with selected text
-vnoremap <Leader>gb :<C-u>!git blame <C-u>=expand("%:p") <CR> \| sed -n <C-r>=line("'<") <CR>,<C-r>=line("'>") <CR>p <CR>
-
 " Load previous session
 " Only available when compiled with the +viminfo feature
 set viminfo='10,\"100,:20,%,n~/.viminfo
 " Set cursor to its last position
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
-
-" Auto change the directory to the current file I'm working on
-autocmd BufEnter * lcd %:p:h
 
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
