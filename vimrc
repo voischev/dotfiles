@@ -28,7 +28,6 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'gorkunov/smartpairs.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'editorconfig/editorconfig-vim'
 
 " Color shemes
 Plugin 'w0ng/vim-hybrid'
