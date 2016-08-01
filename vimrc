@@ -17,15 +17,10 @@ Plugin 'VundleVim/Vundle.vim'
 " plugin on GitHub repo
 
 " Plugins
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'mileszs/ack.vim'
 Plugin 'matze/vim-move'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-unimpaired'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'gorkunov/smartpairs.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'editorconfig/editorconfig-vim'
@@ -63,7 +58,6 @@ set hidden
 set history=1000
 set backspace=indent,eol,start
 set eol
-" set mouse=a
 set scrolloff=30
 set iskeyword+=-
 set wildignore+=.DS_Store,.git,.svn
@@ -145,13 +139,6 @@ nnoremap # #zz
 nnoremap g* g*zz
 nnoremap g# g#zz
 
-" camelCase => camel_case
-vnoremap <Silent> <Leader>c :s/\v\C(([a-z]+)([A-Z]))/\2_\l\3/g<CR>
-
-" Change case to uppercase
-nnoremap <Leader>u gUiw
-inoremap <Leader>u <Esc>gUiwea
-
 " [b]uffers
 map <Leader>, <C-^>
 nnoremap <Leader>b :buffers<cr>
@@ -169,8 +156,6 @@ autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 
-" Automatically removing all trailing whitespace
-autocmd BufWritePre *.{bemhtml,bemtree,js,c,css} :%s/\s\+$//e
 autocmd BufRead,BufNewFile *.{bemtree,bemhtml} set ft=javascript
 
 " Resize splits when the window is resized
