@@ -162,6 +162,9 @@ autocmd BufRead,BufNewFile *.{bemtree,bemhtml} set ft=javascript
 " Only available for GUI
 au VimResized * exe "normal! \<c-w>="
 
+" netrw
+    let g:netrw_keepdir = 0
+
 " Easymotion
     nmap <Leader>m <Plug>(easymotion-s)
     omap <Leader>m <Plug>(easymotion-bd-t)
@@ -173,3 +176,4 @@ au VimResized * exe "normal! \<c-w>="
 
 " vim-move
     let g:move_key_modifier = 'C'
+
