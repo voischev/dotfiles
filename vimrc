@@ -45,6 +45,7 @@ filetype plugin indent on    " required
 
 " settings
 syntax enable
+set nocp
 set encoding=utf-8
 set fileformat=unix
 set t_Co=256
@@ -161,9 +162,6 @@ autocmd BufRead,BufNewFile *.{bemtree,bemhtml} set ft=javascript
 " Resize splits when the window is resized
 " Only available for GUI
 au VimResized * exe "normal! \<c-w>="
-
-" netrw
-    let g:netrw_keepdir = 0
 
 " Easymotion
     nmap <Leader>m <Plug>(easymotion-s)
