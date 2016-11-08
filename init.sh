@@ -3,6 +3,8 @@
 # Brew
 brew update
 # Install more recent versions of some OS X tools
+brew install git
+brew install bash-completion
 brew install vim --override-system-vi
 brew install ack
 brew install homebrew/versions/node4-lts
