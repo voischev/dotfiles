@@ -17,3 +17,4 @@
     ci = commit
     co = checkout
     cl = clean -dfx
+    ls = diff --name-only
