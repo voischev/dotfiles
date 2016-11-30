@@ -18,7 +18,6 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Plugins
 Plugin 'Lokaltog/vim-easymotion'
-Plugin 'mileszs/ack.vim'
 Plugin 'matze/vim-move'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-surround'
