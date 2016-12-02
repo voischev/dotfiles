@@ -1,3 +1,6 @@
+" Init Vundle
+" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+"
 " Vundle
 
 set nocompatible              " be iMproved, required
@@ -97,7 +100,7 @@ function! FileSize()
     endif
 endfunction
 
-set statusline=#%n:\%t\ %m
+set statusline=:b%n\ %t\ %m
 set statusline+=\ \ %Y
 set statusline+=\ \ %3.3(%c%)\ %3.9(%l/%L%)
 set statusline+=\ \ %{FileSize()}
