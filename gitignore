@@ -3,7 +3,6 @@
 ._*
 
 # VIM
-vim/bundle/
 *.swp
 
 # NODEJS

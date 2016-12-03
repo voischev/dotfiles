@@ -53,7 +53,7 @@ set t_Co=256
 set title
 " Don't show the intro message starting Vim
 set shortmess+=I
-set number
+" set number
 set colorcolumn=80
 set showcmd
 set hidden
@@ -86,6 +86,8 @@ set list
 set listchars=tab:→\ ,trail:·,eol:¬,extends:❯,precedes:❮,nbsp:×
 set laststatus=2
 set background=dark
+let g:hybrid_custom_term_colors = 1
+" let g:hybrid_reduced_contrast = 1 " Remove this line if using the default palette.
 colorscheme hybrid
 
 function! FileSize()
@@ -118,13 +120,8 @@ set hlsearch
 set nobackup
 set noswapfile
 
-let mapleader = ","
-
 " [n]ew/ope[n] file in current folder
 map <Leader>n :e <C-R>=escape(expand("%:p:h"),' ') . '/'<CR>
-
-" [O]pen file under cursor in a new vertical split
-nnoremap <Leader>o :<C-u>vertical wincmd f<CR>
 
 " [p]aste mode
 set pastetoggle=<Leader>p
@@ -140,13 +137,6 @@ nnoremap * *zz
 nnoremap # #zz
 nnoremap g* g*zz
 nnoremap g# g#zz
-
-" [b]uffers
-map <Leader>, <C-^>
-nnoremap <Leader>b :buffers<cr>
-nnoremap <Leader>bp :bprev<cr>
-nnoremap <Leader>bn :bnext<cr>
-nnoremap <Leader>w :<C-u>bw<cr>
 
 " Load previous session
 " Only available when compiled with the +viminfo feature
@@ -164,15 +154,9 @@ autocmd BufRead,BufNewFile *.{bemtree,bemhtml} set ft=javascript
 " Only available for GUI
 au VimResized * exe "normal! \<c-w>="
 
-" Easymotion
-    nmap <Leader>m <Plug>(easymotion-s)
-    omap <Leader>m <Plug>(easymotion-bd-t)
-    vmap <Leader>m <Plug>(easymotion-bd-t)
-
 " Nerdcommenter
-    let NERDSpaceDelims=1
-    let NERDRemoveExtraSpaces=1
+    let NERDSpaceDelims = 1
+    let NERDRemoveExtraSpaces = 1
 
 " vim-move
     let g:move_key_modifier = 'C'
-
