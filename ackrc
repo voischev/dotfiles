@@ -1,0 +1,11 @@
+### Directories to ignore
+# Enb
+--ignore-file=is:cache.json
+
+# Docs
+--ignore-file=match:/\.doc\.js/
+
+# BEMHTML
+--type-add=bemhtml:ext:bemhtml
+--type-add=bemhtml:match:/bemhtml\.js/
+
