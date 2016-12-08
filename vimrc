@@ -127,8 +127,8 @@ map <Leader>n :e <C-R>=escape(expand("%:p:h"),' ') . '/'<CR>
 set pastetoggle=<Leader>p
 
 " buffers
-nnoremap <Leader>, :bprev<cr>
-nnoremap <Leader>. :bnext<cr>
+nnoremap <Leader>[ :bprev<cr>
+nnoremap <Leader>] :bnext<cr>
 
 " [r]eplase
 nnoremap <Leader>r :<C-u>%s//<Left>
