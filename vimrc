@@ -102,7 +102,7 @@ endfunction
 
 set statusline=:b%n\ %t\ %m
 set statusline+=\ \ %Y
-set statusline+=\ \ %3.3(%c%)\ %3.9(%l/%L%)
+set statusline+=\ \ %3.3(%c%)\ %3.9(%l%)
 set statusline+=\ \ %{FileSize()}
 set statusline+=\ \ %{&fileencoding}
 
@@ -155,6 +155,9 @@ autocmd BufRead,BufNewFile *.{bemtree,bemhtml} set ft=javascript
 " Resize splits when the window is resized
 " Only available for GUI
 au VimResized * exe "normal! \<c-w>="
+
+" Netrw
+    let g:netrw_banner=0
 
 " Nerdcommenter
     let NERDSpaceDelims = 1
