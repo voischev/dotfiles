@@ -14,3 +14,4 @@
     co = checkout
     cl = clean -dfx
     ls = diff --name-only
+    hist = log --oneline --graph
