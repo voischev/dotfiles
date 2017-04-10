@@ -9,7 +9,9 @@ export PATH="./node_modules/.bin:$PATH"
 export EDITOR="vim"
 export WATCH_BUILDER="0"
 
-if [ -f $(brew --prefix)/etc/bash_completion  ]; then
+if [ "$(uname)" == "Darwin" ]; then
     . $(brew --prefix)/etc/bash_completion
+else
+    . /etc/bash_completion
 fi
 
