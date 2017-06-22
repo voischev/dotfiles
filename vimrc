@@ -26,9 +26,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'editorconfig/editorconfig-vim'
 
-" Color shemes
-Plugin 'w0ng/vim-hybrid'
-
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -85,8 +82,6 @@ set cursorline
 set list
 set listchars=tab:→\ ,trail:·,eol:¬,extends:❯,precedes:❮,nbsp:×
 set laststatus=2
-set background=dark
-colorscheme hybrid
 
 function! FileSize()
     let bytes = getfsize(expand("%:p"))
