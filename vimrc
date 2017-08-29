@@ -43,14 +43,13 @@ filetype plugin indent on    " required
 
 " settings
 syntax enable
-set nocp
 set encoding=utf-8
 set fileformat=unix
 set t_Co=256
-set title
+set notitle
+set icon
 " Don't show the intro message starting Vim
 set shortmess+=I
-" set number
 set colorcolumn=80
 set showcmd
 set hidden
