@@ -162,6 +162,19 @@ autocmd BufRead,BufNewFile *.{bemtree,bemhtml} set ft=javascript
 " Only available for GUI
 au VimResized * exe "normal! \<c-w>="
 
+" Easymotion
+    " <Leader>f{char} to move to {char}
+    map  <Leader>f <Plug>(easymotion-bd-f)
+    nmap <Leader>f <Plug>(easymotion-overwin-f)
+    " s{char}{char} to move to {char}{char}
+    nmap s <Plug>(easymotion-overwin-f2)
+    " Move to line
+    map <Leader>L <Plug>(easymotion-bd-jk)
+    nmap <Leader>L <Plug>(easymotion-overwin-line)
+    " Move to word
+    map  <Leader>w <Plug>(easymotion-bd-w)
+    nmap <Leader>w <Plug>(easymotion-overwin-w)
+
 " Disable SQL Omni
     let g:omni_sql_no_default_maps = 1
     let g:ftplugin_sql_omni_key = '<Leader>sql'
