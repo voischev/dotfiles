@@ -146,6 +146,7 @@ nnoremap g# g#zz
 " Load previous session
 " Only available when compiled with the +viminfo feature
 set viminfo='10,\"100,:20,%,n~/.viminfo
+
 " Set cursor to its last position
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
@@ -163,29 +164,37 @@ autocmd BufRead,BufNewFile *.{bemtree,bemhtml} set ft=javascript
 au VimResized * exe "normal! \<c-w>="
 
 " Easymotion
-    " <Leader>f{char} to move to {char}
-    map  <Leader>f <Plug>(easymotion-bd-f)
-    nmap <Leader>f <Plug>(easymotion-overwin-f)
-    " s{char}{char} to move to {char}{char}
-    nmap s <Plug>(easymotion-overwin-f2)
-    " Move to line
-    map <Leader>L <Plug>(easymotion-bd-jk)
-    nmap <Leader>L <Plug>(easymotion-overwin-line)
-    " Move to word
-    map  <Leader>w <Plug>(easymotion-bd-w)
-    nmap <Leader>w <Plug>(easymotion-overwin-w)
+
+" <Leader>f{char} to move to {char}
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+
+" s{char}{char} to move to {char}{char}
+nmap s <Plug>(easymotion-overwin-f2)
+
+" Move to line
+map <Leader>L <Plug>(easymotion-bd-jk)
+nmap <Leader>L <Plug>(easymotion-overwin-line)
+
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
 
 " Disable SQL Omni
-    let g:omni_sql_no_default_maps = 1
-    let g:ftplugin_sql_omni_key = '<Leader>sql'
-    let g:ftplugin_sql_omni_key = '<Plug>DisableSqlOmni'
+
+let g:omni_sql_no_default_maps = 1
+let g:ftplugin_sql_omni_key = '<Leader>sql'
+let g:ftplugin_sql_omni_key = '<Plug>DisableSqlOmni'
 
 " Netrw
-    let g:netrw_banner=0
+
+let g:netrw_banner=0
 
 " Nerdcommenter
-    let NERDSpaceDelims = 1
-    let NERDRemoveExtraSpaces = 1
+
+let NERDSpaceDelims = 1
+let NERDRemoveExtraSpaces = 1
 
 " vim-move
-    let g:move_key_modifier = 'C'
+
+let g:move_key_modifier = 'C'
