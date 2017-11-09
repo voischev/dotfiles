@@ -46,6 +46,8 @@ filetype plugin indent on    " required
 syntax enable
 set encoding=utf-8
 set fileformat=unix
+set visualbell
+set t_vb=
 set t_Co=256
 set notitle
 set icon
