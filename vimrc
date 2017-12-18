@@ -115,6 +115,10 @@ set visualbell
 set incsearch
 set hlsearch
 
+" spell
+" http://www.opennet.ru/base/X/vim_orfo.txt.html
+set spell spelllang=en,ru
+
 " backups
 set nobackup
 set noswapfile
