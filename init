@@ -11,3 +11,4 @@ ln -s $DOTFILES/profile         $HOME/.profile
 ln -s $DOTFILES/vimrc           $HOME/.vimrc
 ln -s $DOTFILES/ackrc           $HOME/.ackrc
 ln -s $DOTFILES/gitignore       $HOME/.gitignore
+ln -s $DOTFILES/tmux            $HOME/.tmux.conf
