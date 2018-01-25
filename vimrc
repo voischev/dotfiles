@@ -195,6 +195,7 @@ let g:ftplugin_sql_omni_key = '<Plug>DisableSqlOmni'
 " Netrw
 
 let g:netrw_banner=0
+let g:netrw_localrmdir='rm -r'
 
 " Nerdcommenter
 
