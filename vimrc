@@ -186,12 +186,6 @@ nmap <Leader>L <Plug>(easymotion-overwin-line)
 map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
 
-" Disable SQL Omni
-
-let g:omni_sql_no_default_maps = 1
-let g:ftplugin_sql_omni_key = '<Leader>sql'
-let g:ftplugin_sql_omni_key = '<Plug>DisableSqlOmni'
-
 " Netrw
 
 let g:netrw_banner=0
