@@ -53,6 +53,9 @@ vnoremap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=lin
 " Auto change the directory to the current file I'm working on
 " autocmd BufEnter * lcd %:p:h
 
+" Automatically removing all trailing whitespace
+autocmd BufWritePre *.{js,css,md} :%s/\s\+$//e
+
 " Netrw
 let g:netrw_banner=0
 let g:netrw_localrmdir='rm -r'
