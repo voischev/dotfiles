@@ -50,11 +50,19 @@ set pastetoggle=<Leader>p
 " [b]lame
 " In Visual mode exec git blame with selected text
 vnoremap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
+
+" Load previous session
+" Only available when compiled with the +viminfo feature
+" set viminfo='10,\"100,:20,%,n~/.viminfo
+
+" Set cursor to its last position
+au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+
 " Auto change the directory to the current file I'm working on
 " autocmd BufEnter * lcd %:p:h
 
 " Automatically removing all trailing whitespace
-autocmd BufWritePre *.{js,css,md} :%s/\s\+$//e
+" autocmd BufWritePre *.{js,css,md} :%s/\s\+$//e
 
 " Netrw
 let g:netrw_banner=0
