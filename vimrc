@@ -36,6 +36,9 @@ set statusline=:b%n\ %t\ %m\ %Y
 set incsearch
 set hlsearch
 
+" folding
+set foldmethod=indent
+
 " spell
 " http://www.opennet.ru/base/X/vim_orfo.txt.html
 set spell spelllang=en,ru
