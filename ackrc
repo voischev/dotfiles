@@ -1,6 +1,9 @@
 ### Directories to ignore
-# Enb
+# web4
 --ignore-file=is:cache.json
+--ignore-file=is:blockstat.dict.json
+--ignore-dir=hermione-report
+--ignore-dir=gemini-report
 
 # Docs
 --ignore-file=match:/\.doc\.js/
