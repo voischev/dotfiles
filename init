@@ -4,7 +4,7 @@
 export DOTFILES=$HOME/.dotfiles
 
 # Configs
-ln -s $DOTFILES/profile         $HOME/.profile
+ln -s $DOTFILES/bash_profile         $HOME/.bash_profile
 ln -s $DOTFILES/vimrc           $HOME/.vimrc
 ln -s $DOTFILES/ackrc           $HOME/.ackrc
 ln -s $DOTFILES/gitignore       $HOME/.gitignore
