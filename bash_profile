@@ -10,3 +10,5 @@ export PATH="$PATH:~/project/local-sandbox/bin"
 export EDITOR="vim"
 export WATCH_BUILDER="0"
 export GREP_OPTIONS="--exclude-dir=.git --exclude-dir=node_modules"
+
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
