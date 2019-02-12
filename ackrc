@@ -2,6 +2,7 @@
 # web4
 --ignore-file=is:cache.json
 --ignore-file=is:blockstat.dict.json
+--ignore-file=is:build-meta.json
 --ignore-dir=hermione-report
 --ignore-dir=gemini-report
 
