@@ -12,4 +12,9 @@ export EDITOR="vim"
 export WATCH_BUILDER="0"
 export GREP_OPTIONS="--exclude-dir=.git --exclude-dir=node_modules"
 
+# brew install bash-completion
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+
+# find / -type f -name "git-completion.bash"
+# vim /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
+[ -f ~/git-completion.bash ] && . ~/git-completion.bash
