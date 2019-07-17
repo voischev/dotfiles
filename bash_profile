@@ -18,3 +18,7 @@ export GREP_OPTIONS="--exclude-dir=.git --exclude-dir=node_modules"
 # find / -type f -name "git-completion.bash"
 # vim /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
 [ -f ~/git-completion.bash ] && . ~/git-completion.bash
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
