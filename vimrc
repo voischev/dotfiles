@@ -69,6 +69,7 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
 
 " everything is javascript for me
 au BufNewFile,BufRead *.ts set filetype=javascript
+au BufNewFile,BufRead *.tsx set filetype=javascript
 
 " Netrw
 let g:netrw_banner=0
