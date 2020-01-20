@@ -74,3 +74,6 @@ au BufNewFile,BufRead *.tsx set filetype=javascript
 " Netrw
 let g:netrw_banner=0
 let g:netrw_localrmdir='rm -r'
+
+" Ack grep
+set grepprg=ack\ -k
