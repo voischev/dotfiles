@@ -27,6 +27,7 @@ set linebreak
 set cursorline
 set list
 set listchars=tab:→\ ,trail:·,eol:¬,extends:❯,precedes:❮,nbsp:×
+set synmaxcol=210
 
 " statusline
 set laststatus=2
