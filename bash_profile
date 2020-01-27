@@ -8,6 +8,7 @@ export PATH="./node_modules/.bin:$PATH"
 export PATH="$PATH:~/project/local-sandbox/bin"
 export PATH="$PATH:$(pwd)"
 
+export LC_ALL="en_US.UTF-8"
 export EDITOR="vim"
 export WATCH_BUILDER="0"
 export GREP_OPTIONS="--exclude-dir=.git --exclude-dir=node_modules"
