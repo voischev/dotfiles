@@ -77,4 +77,5 @@ let g:netrw_banner=0
 let g:netrw_localrmdir='rm -r'
 
 " Ack grep
+" :grep PATERN PATH | :copen
 set grepprg=ack\ -k

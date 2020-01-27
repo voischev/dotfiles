@@ -1,5 +1,4 @@
-Заметки VIM
-===========
+ЗАМЕТКИ VIM
 
 Форматирование:
 
@@ -13,21 +12,26 @@
         nnoremap <C-f> :silent exec "!npx prettier % --write --trailing-comma=all --single-quote=true --print-width=100"<cr> :redraw!<cr>
 
 
-Fuzzy поиск по открытым буфферам
+Fuzzy поиск по именам файлов (открытыx буфферах)
 
     Настраиваем горячу клавишу, например <Leader>f:
 
         nnoremap <Leader>f :set nomore<Bar>:ls<Bar>:set more<CR>:b<Space>
 
 
+Git Blame для выделенной, в VISUAL MODE, части текста
+
+    vnoremap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
+
+
+При открытии файла установить курсор в последней позиции
+
+    au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+
+
 Автоматически удалять висячие пробелы при сохранении
 
     autocmd BufWritePre *.{bemhtml,bemtree,js,c,css} :%s/\s\+$//e
-
-
-Русские клавиши в normal mod
-
-    set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 
 
 Центровать результат поиска всегда по центру
@@ -55,8 +59,56 @@ Fuzzy поиск по открытым буфферам
     autocmd BufEnter * lcd %:p:h
 
 
-Ссылки
-======
+ПОИСК
+
+Найти слово над которым курсор
+
+    *
+
+
+Поиск по файлам
+
+    :grep PATERN [PATH] | :copen
+
+
+Открыть список с результатами поиска по файлам
+
+    :copen
+    :cw
+
+
+ТИПОГРАФИКА И ТЕКСТ
+
+Выравнивание текста
+
+    :center [width]
+    :right [width]
+    :left
+
+
+Таблица с символами
+
+    :help digraph-table
+
+    В режиме редактирования через CTRL+k
+
+        ©   Co
+        ®   Rg
+        ±   +-
+        λ   l*
+        π   p*
+        δ   d*
+
+
+КАЛЬКУЛЯТОР
+
+В режиме редактирования активируем калькулятор CTRL+r+= вводим выражение, жмём Enter
+
+    CTRL+r+=512/2 Enter
+    256
+
+
+ССЫЛКИ
 
 * https://danielmiessler.com/study/vim/
 * https://github.com/mathiasbynens/dotfiles
