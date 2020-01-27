@@ -1,0 +1,69 @@
+Заметки VIM
+===========
+
+Форматирование:
+
+    Для не отформатированных файлов
+
+        :!js-beautify % -o %
+
+
+    Использование prettier
+
+        nnoremap <C-f> :silent exec "!npx prettier % --write --trailing-comma=all --single-quote=true --print-width=100"<cr> :redraw!<cr>
+
+
+Fuzzy поиск по открытым буфферам
+
+    Настраиваем горячу клавишу, например <Leader>f:
+
+        nnoremap <Leader>f :set nomore<Bar>:ls<Bar>:set more<CR>:b<Space>
+
+
+Автоматически удалять висячие пробелы при сохранении
+
+    autocmd BufWritePre *.{bemhtml,bemtree,js,c,css} :%s/\s\+$//e
+
+
+Русские клавиши в normal mod
+
+    set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
+
+
+Центровать результат поиска всегда по центру
+
+    nnoremap n nzz
+    nnoremap N Nzz
+    nnoremap * *zz
+    nnoremap # #zz
+    nnoremap g* g*zz
+    nnoremap g# g#zz
+
+
+Загрузить предыдущую сессию
+
+    set viminfo='10,\"100,:20,%,n~/.viminfo
+
+
+Поставить курсор на предыдущую позицию открывая файл
+
+    au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+
+
+Изменять директорию до места где находится редактируемый файл
+
+    autocmd BufEnter * lcd %:p:h
+
+
+Ссылки
+======
+
+* https://danielmiessler.com/study/vim/
+* https://github.com/mathiasbynens/dotfiles
+* https://github.com/mpyatishev
+* https://github.com/mislav/vimfiles/blob/master/vimrc
+* https://github.com/gmarik/vimfiles
+* https://github.com/swaroopch/dotvim/blob/master/vimrc
+* https://github.com/madundead/stuff/blob/master/dotfiles/vim/vimrc.symlink
+
+

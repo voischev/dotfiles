@@ -6,6 +6,7 @@
 
     - IBM Plex Mono (https://github.com/IBM/plex)
 
-VIM шпаргалка:
+VIM:
 
     - https://raw.githubusercontent.com/voischev/dotfiles/master/vim.png
+    - https://raw.githubusercontent.com/voischev/dotfiles/master/vim.txt
