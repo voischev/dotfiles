@@ -5,5 +5,8 @@
 # VIM
 *.swp
 
+# TMP
+*.tmp
+
 # NODEJS
 npm-debug.log
