@@ -12,6 +12,7 @@ export LC_ALL="en_US.UTF-8"
 export EDITOR="vim"
 export WATCH_BUILDER="0"
 export GREP_OPTIONS="--exclude-dir=.git --exclude-dir=node_modules"
+export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # brew install bash-completion
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
