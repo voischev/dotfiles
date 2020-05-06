@@ -55,6 +55,10 @@ set pastetoggle=<Leader>p
 " In Visual mode exec git blame with selected text
 vnoremap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
 
+" ya [p]aste
+" In Visual mode exec ya paste with selected text
+vnoremap <Leader>p :<C-U>!ya paste <(cat <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p )<CR>
+
 " Load previous session
 " Only available when compiled with the +viminfo feature
 " set viminfo='10,\"100,:20,%,n~/.viminfo
