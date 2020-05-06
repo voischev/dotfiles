@@ -21,6 +21,8 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 # vim /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
 [ -f ~/git-completion.bash ] && . ~/git-completion.bash
 
+arc completion bash > ~/.arc/completion.bash && source ~/.arc/completion.bash
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
