@@ -1,6 +1,8 @@
 " settings
 syntax enable
 set encoding=utf-8
+set background=light
+colorscheme zellner
 set scrolloff=30
 set colorcolumn=80
 set backspace=indent,eol,start
