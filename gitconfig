@@ -4,6 +4,7 @@
 [core]
     editor = vim
     whitespace=fix,-indent-with-non-tab,trailing-space,space-before-tab
+    excludesfile = ~/.gitignore
 [push]
     default = simple
 [alias]
