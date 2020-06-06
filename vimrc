@@ -8,6 +8,7 @@ set hidden
 set visualbell
 set t_vb=
 set noswapfile
+set wildmenu
 " }}}
 
 " terminal {{{
@@ -24,6 +25,7 @@ set ignorecase
 set expandtab
 set tabstop=4
 set shiftwidth=4
+set showmatch
 set wrap
 set linebreak
 set cursorline
