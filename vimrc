@@ -9,6 +9,7 @@ set visualbell
 set t_vb=
 set noswapfile
 set wildmenu
+set path+=**
 " }}}
 
 " terminal {{{
