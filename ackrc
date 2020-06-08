@@ -6,6 +6,9 @@
 --ignore-dir=hermione-report
 --ignore-dir=gemini-report
 
+# ctags
+--ignore-file=match:/^tags$/
+
 # Docs
 --ignore-file=match:/\.doc\.js/
 
