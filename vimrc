@@ -46,7 +46,7 @@ set hlsearch
 " }}}
 
 " folding {{{
-set foldmethod=indent
+set foldmethod=syntax
 autocmd FileType vim setlocal foldmethod=marker
 " }}}
 
