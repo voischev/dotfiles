@@ -3,6 +3,7 @@ syntax enable
 set encoding=utf-8
 set scrolloff=30
 set colorcolumn=80
+set relativenumber
 set backspace=indent,eol,start
 set hidden
 set visualbell
