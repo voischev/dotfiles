@@ -1,9 +1,6 @@
 " settings {{{
 syntax enable
 set encoding=utf-8
-set scrolloff=30
-set colorcolumn=80
-set relativenumber
 set backspace=indent,eol,start
 set hidden
 set visualbell
@@ -28,13 +25,18 @@ set ignorecase
 set expandtab
 set tabstop=4
 set shiftwidth=4
-set showmatch
-set wrap
+set scrolloff=30
+set colorcolumn=80
+set relativenumber
+set nowrap
 set linebreak
 set cursorline
+set showmatch
 set list
 set listchars=tab:→\ ,trail:·,eol:¬,extends:❯,precedes:❮,nbsp:×
 set synmaxcol=210
+autocmd FileType markdown setlocal norelativenumber
+autocmd FileType markdown setlocal wrap
 " }}}
 
 " statusline {{{
