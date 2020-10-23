@@ -5,6 +5,7 @@
 --ignore-file=is:build-meta.json
 --ignore-dir=hermione-report
 --ignore-dir=gemini-report
+--ignore-dir=.build
 
 # ctags
 --ignore-file=match:/^tags$/
