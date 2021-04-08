@@ -111,3 +111,14 @@ let g:netrw_localrmdir='rm -r'
 " :grep PATERN PATH | :copen
 set grepprg=ack\ -k
 " }}}
+
+" Experemntal {{{
+
+" Time out on key codes but not mappings.
+" Basically this makes terminal Vim work sanely.
+" set timeoutlen=200
+set notimeout
+set ttimeout
+set ttimeoutlen=100
+
+" }}}
