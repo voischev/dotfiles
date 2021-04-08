@@ -8,8 +8,9 @@ set t_vb=
 set noswapfile
 set wildmenu
 set path+=**
-set wildignore+=**/node_modules/**
+" set wildignore+=**/node_modules/**
 set isfname+=@-@
+set lazyredraw
 " }}}
 
 " terminal {{{
@@ -36,8 +37,13 @@ set showmatch
 set list
 set listchars=tab:→\ ,trail:·,eol:¬,extends:❯,precedes:❮,nbsp:×
 set synmaxcol=210
-autocmd FileType markdown setlocal norelativenumber
-autocmd FileType markdown setlocal wrap
+" }}}
+
+" file types {{{
+autocmd FileType markdown setlocal norelativenumber wrap
+autocmd FileType javascript setlocal suffixesadd=.js
+autocmd FileType typescript setlocal suffixesadd=.ts,.tsx,.d.ts
+autocmd FileType python setl softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
 " }}}
 
 " statusline {{{
