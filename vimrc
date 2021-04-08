@@ -9,6 +9,7 @@ set noswapfile
 set wildmenu
 set path+=**
 set wildignore+=**/node_modules/**
+set isfname+=@-@
 " }}}
 
 " terminal {{{
