@@ -6,7 +6,6 @@ export PS1="\[${suits[RANDOM % 4]}\] \[$(tput setaf 2)\]\W\n\[$(tput sgr0)\]❯ 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="./node_modules/.bin:$PATH"
-export PATH="$PATH:~/project/local-sandbox/bin"
 export PATH="$PATH:$(pwd)"
 
 export LC_ALL="en_US.UTF-8"

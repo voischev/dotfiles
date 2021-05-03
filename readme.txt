@@ -1,6 +1,6 @@
-Установка:
+Установка и обновление:
 
-    git clone https://github.com/voischev/dotfiles.git ~/.dotfiles && ~/.dotfiles/init.sh
+    curl -L https://github.com/voischev/dotfiles/raw/master/setup.sh | bash
 
 Шрифт для терминала:
 
