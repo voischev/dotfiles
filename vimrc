@@ -105,6 +105,7 @@ autocmd BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '
 " Netrw {{{
 let g:netrw_banner=0
 let g:netrw_localrmdir='rm -r'
+let g:netrw_keepdir=0
 " }}}
 
 " Ack grep {{{
