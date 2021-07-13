@@ -1,3 +1,5 @@
+[init]
+    defaultBranch = dev
 [user]
     name = Ivan Voischev
     email = voischev.ivan@ya.ru
