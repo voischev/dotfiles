@@ -13,6 +13,14 @@ set isfname+=@-@
 set lazyredraw
 " }}}
 
+" undo history {{{
+if !isdirectory($HOME.'/.vim/undo')
+    call mkdir($HOME.'/.vim/undo', 'p')
+endif
+set undofile
+set undodir=$HOME/.vim/undo
+" }}}
+
 " terminal {{{
 set notitle
 set icon
