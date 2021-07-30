@@ -10,6 +10,7 @@ set wildmenu
 set path+=**
 " set wildignore+=**/node_modules/**
 set isfname+=@-@
+set suffixesadd=.js,.ts,.tsx
 set lazyredraw
 " }}}
 
