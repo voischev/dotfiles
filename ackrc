@@ -5,13 +5,12 @@
 --ignore-file=is:build-meta.json
 --ignore-dir=hermione-report
 --ignore-dir=gemini-report
+--ignore-dir=test-data
 --ignore-dir=.build
 
-# ctags
 --ignore-file=match:/^tags$/
-
-# Docs
---ignore-file=match:/\.doc\.js/
+--ignore-file=match:/\.doc\.js$/
+--ignore-file=match:/\.json\.gz$/
 
 # BEMHTML
 --type-add=bemhtml:ext:bemhtml
