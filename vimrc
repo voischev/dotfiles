@@ -67,7 +67,7 @@ set hlsearch
 
 " folding {{{
 set foldmethod=syntax
-autocmd FileType vim setlocal foldmethod=marker
+autocmd FileType vim,text setlocal foldmethod=marker
 " }}}
 
 " spell {{{
