@@ -4,9 +4,6 @@ DOTFILES=$HOME/.dotfiles
 
 git clone https://github.com/voischev/dotfiles.git $DOTFILES
 
-# Зависимости
-sudo apt-get install cmake python3-dev lua5.2 liblua5.2-0
-
 cd $DOTFILES
 git submodule update --remote --merge
 
