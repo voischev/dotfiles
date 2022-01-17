@@ -14,3 +14,4 @@ ln -s $DOTFILES/bash_profile    .bash_profile
 ln -s $DOTFILES/ackrc           .ackrc
 ln -s $DOTFILES/gitignore       .gitignore
 ln -s $DOTFILES/tmux            .tmux.conf
+ln -s $DOTFILES/ctags           .ctags
