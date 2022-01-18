@@ -1,5 +1,14 @@
 #!/bin/bash
 
+#sudo apt search vim
+#sudo apt install software-properties-common
+#sudo add-apt-repository ppa:jonathonf/vim
+#sudo apt update
+#sudo apt search vim
+#sudo apt install --upgrade vim-nox
+#sudo update-alternatives --config vim
+
+
 # Актуально для Ubuntu server
 
 # Удалить старые версии vim
