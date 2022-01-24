@@ -1,4 +1,4 @@
---ignore-dir=.release
+--ignore-dir=.releases
 --ignore-dir=dist
 
 --ignore-file=match:/^tags$/
