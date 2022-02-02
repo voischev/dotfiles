@@ -119,7 +119,7 @@ let g:netrw_keepdir=0
 
 " Ack grep {{{
 " :grep PATERN PATH | :copen
-set grepprg=ack\ -k
+set grepprg=ack
 " }}}
 
 " Experemntal {{{
