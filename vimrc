@@ -1,5 +1,6 @@
 " settings {{{
 syntax enable
+set synmaxcol=210
 set encoding=utf-8
 set backspace=indent,eol,start
 set hidden
@@ -45,7 +46,6 @@ set cursorline
 set showmatch
 set list
 set listchars=tab:→\ ,trail:·,eol:¬,extends:❯,precedes:❮,nbsp:×
-set synmaxcol=210
 " }}}
 
 " file types {{{
@@ -105,6 +105,11 @@ autocmd BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '
 
 " Auto change the directory to the current file I'm working on {{{
 " autocmd BufEnter * lcd %:p:h
+" }}}
+
+" Убирает тормоза при работе с большими файлами {{{
+autocmd BufEnter * call clearmatches()
+autocmd BufWinEnter * if line2byte(line("$") + 1) > 1000000 | syntax clear | endif
 " }}}
 
 " Automatically removing all trailing whitespace {{{
