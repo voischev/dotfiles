@@ -52,7 +52,7 @@ set listchars=tab:→\ ,trail:·,eol:¬,extends:❯,precedes:❮,nbsp:×
 autocmd FileType markdown setlocal norelativenumber wrap
 autocmd FileType javascript setlocal suffixesadd=.js
 autocmd FileType typescript setlocal suffixesadd=.ts,.tsx,.d.ts
-autocmd FileType python setl softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
+autocmd FileType python setlocal softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
 " }}}
 
 " statusline {{{
@@ -109,7 +109,7 @@ autocmd BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '
 
 " Убирает тормоза при работе с большими файлами {{{
 autocmd BufEnter * call clearmatches()
-autocmd BufWinEnter * if line2byte(line("$") + 1) > 1000000 | syntax clear | endif
+autocmd BufWinEnter * if line2byte(line("$") + 1) > 1000000 | syntax clear | setlocal nospell | endif
 " }}}
 
 " Automatically removing all trailing whitespace {{{
