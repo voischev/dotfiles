@@ -55,11 +55,6 @@ autocmd FileType typescript setlocal suffixesadd=.ts,.tsx,.d.ts
 autocmd FileType python setlocal softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
 " }}}
 
-" statusline {{{
-set laststatus=2
-set statusline=:b%n\ %t\ %m\ %Y
-" }}}
-
 " search {{{
 set incsearch
 set hlsearch
