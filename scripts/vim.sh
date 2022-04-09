@@ -38,7 +38,7 @@ make distclean
 --enable-python3interp \
 --with-python3-command=python3 \
 --enable-largefile \
---with-compiledby="ivan Voischev <voischev-ivan@ya.ru>"
+--with-compiledby="ivan Voischev <voischev.ivan@ya.ru>"
 
 make -j4 VIMRUNTIMEDIR=/usr/local/share/vim/vim82
 sudo make install
