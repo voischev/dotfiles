@@ -39,7 +39,6 @@ set tabstop=4
 set shiftwidth=4
 set scrolloff=30
 set colorcolumn=80
-set relativenumber
 set nowrap
 set linebreak
 set cursorline
@@ -49,7 +48,7 @@ set listchars=tab:→\ ,trail:·,eol:¬,extends:❯,precedes:❮,nbsp:×
 " }}}
 
 " file types {{{
-autocmd FileType markdown setlocal norelativenumber wrap
+autocmd FileType markdown setlocal wrap
 autocmd FileType javascript setlocal suffixesadd=.js
 autocmd FileType typescript setlocal suffixesadd=.ts,.tsx,.d.ts
 autocmd FileType python setlocal softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
