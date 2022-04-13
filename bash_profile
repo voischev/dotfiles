@@ -10,8 +10,19 @@ export PATH="$PATH:$(pwd)"
 
 export LC_ALL="en_US.UTF-8"
 export EDITOR="vim"
-export WATCH_BUILDER=0
 export BASH_SILENCE_DEPRECATION_WARNING=1
+
+# https://github.com/beyondgrep/ack2/blob/dev/ConfigDefault.pm
+GREP_OPTIONS="--color=auto"
+# default
+for pattern in .git .svn node_modules; do
+    GREP_OPTIONS+=" --exclude-dir=$pattern"
+done
+# custom
+for pattern in .releases .autopep8 .venv dist; do
+    GREP_OPTIONS+=" --exclude-dir=$pattern"
+done
+export GREP_OPTIONS
 
 # brew install bash-completion
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
