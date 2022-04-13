@@ -26,7 +26,8 @@ GREP_OPTIONS+=" --exclude=\*.min.{css,js}"
 for pattern in .releases .autopep8 .venv dist; do
     GREP_OPTIONS+=" --exclude-dir=$pattern"
 done
-export GREP_OPTIONS
+
+alias grep="grep -Er $GREP_OPTIONS"
 
 # brew install bash-completion
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
