@@ -47,6 +47,11 @@ set list
 set listchars=tab:→\ ,trail:·,eol:¬,extends:❯,precedes:❮,nbsp:×
 " }}}
 
+" statusline {{{
+set laststatus=2
+set statusline=:b%n\ %<%F\ %h%m%r%=%-8.(%l,%c%V%)\ %P
+" }}}
+
 " file types {{{
 autocmd FileType markdown setlocal wrap
 autocmd FileType javascript setlocal suffixesadd=.js
