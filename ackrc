@@ -1,7 +1,0 @@
---ignore-dir=.releases
---ignore-dir=dist
---ignore-dir=.venv
---ignore-dir=.autopep8
-
---ignore-file=match:/^tags$/
---ignore-file=match:/\.json\.gz$/

@@ -121,11 +121,6 @@ let g:netrw_localrmdir='rm -r'
 let g:netrw_keepdir=0
 " }}}
 
-" Ack grep {{{
-" :grep PATERN PATH | :copen
-set grepprg=ack
-" }}}
-
 " Experemntal {{{
 
 " Time out on key codes but not mappings.
