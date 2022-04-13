@@ -27,7 +27,7 @@ for pattern in .releases .autopep8 .venv dist; do
     GREP_OPTIONS+=" --exclude-dir=$pattern"
 done
 
-alias grep="grep -Er $GREP_OPTIONS"
+alias grep="grep -r $GREP_OPTIONS"
 
 # brew install bash-completion
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
