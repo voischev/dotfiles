@@ -1,9 +1,0 @@
-#!/bin/bash
-
-prefix='';
-
-if [[ -n $1 ]]; then
-    prefix=$(echo $1_)
-fi
-
-vim $(echo $prefix$(date '+%Y-%m-%d_%H-%M-%S').note.txt)

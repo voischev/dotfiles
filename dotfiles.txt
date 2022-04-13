@@ -1,0 +1,1 @@
+cd ~ && curl -Ls -o dotfiles.zip https://github.com/voischev/dotfiles/archive/refs/heads/master.zip && unzip -j dotfiles.zip

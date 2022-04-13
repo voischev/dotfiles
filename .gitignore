@@ -1,3 +1,13 @@
-vim/.netrwhist
-vim/undo
-vim/spell
+# OS
+.DS_Store
+._*
+
+# EDITORS
+.idea/
+*.swp
+
+# TMP
+*.tmp
+
+# NODEJS
+npm-debug.log

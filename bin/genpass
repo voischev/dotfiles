@@ -1,5 +1,0 @@
-#!/bin/bash
-
-openssl rand -base64 6
-
-# openssl rand -hex 4
