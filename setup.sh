@@ -11,7 +11,5 @@ rm -rf                          .vim
 ln -s $DOTFILES/vim/            .vim
 ln -s $DOTFILES/vimrc           .vimrc
 ln -s $DOTFILES/bash_profile    .bash_profile
-ln -s $DOTFILES/ackrc           .ackrc
 ln -s $DOTFILES/gitignore       .gitignore
 ln -s $DOTFILES/tmux            .tmux.conf
-ln -s $DOTFILES/ctags           .ctags
