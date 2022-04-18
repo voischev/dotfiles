@@ -14,17 +14,13 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 
 GREP_OPTIONS="--color=auto"
 # default
-for pattern in .git .svn node_modules; do
-    GREP_OPTIONS+=" --exclude-dir=$pattern"
-done
+GREP_OPTIONS+=" --exclude-dir={.git,.svn,node_modules}"
 GREP_OPTIONS+=" --exclude=\*.swp"
 GREP_OPTIONS+=" --exclude=\*.{pdf,jpg,jpeg,png}"
 GREP_OPTIONS+=" --exclude=\*.{css,js}.map"
 GREP_OPTIONS+=" --exclude=\*.min.{css,js}"
 # custom
-for pattern in .releases .autopep8 .venv dist; do
-    GREP_OPTIONS+=" --exclude-dir=$pattern"
-done
+GREP_OPTIONS+=" --exclude-dir={.releases,.autopep8,.venv,dist}"
 alias grep="grep $GREP_OPTIONS"
 
 # brew install bash-completion
