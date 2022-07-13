@@ -20,7 +20,7 @@ GREP_OPTIONS+=" --exclude=\*.{pdf,jpg,jpeg,png}"
 GREP_OPTIONS+=" --exclude=\*.{css,js}.map"
 GREP_OPTIONS+=" --exclude=\*.min.{css,js}"
 # custom
-GREP_OPTIONS+=" --exclude-dir={.releases,.autopep8,.venv,dist}"
+GREP_OPTIONS+=" --exclude-dir={.releases,.autopep8,.venv,dist,.next}"
 alias grep="grep $GREP_OPTIONS"
 
 # brew install bash-completion
