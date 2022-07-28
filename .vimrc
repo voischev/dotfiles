@@ -111,23 +111,19 @@ autocmd BufEnter * call clearmatches()
 autocmd BufWinEnter * if line2byte(line("$") + 1) > 1000000 | syntax clear | setlocal nospell | endif
 " }}}
 
-" Automatically removing all trailing whitespace {{{
-" autocmd BufWritePre *.{js,css,md} :%s/\s\+$//e
-" }}}
-
 " Netrw {{{
 let g:netrw_banner=0
 let g:netrw_localrmdir='rm -r'
 let g:netrw_keepdir=0
 " }}}
 
-" Experemntal {{{
-
-" Time out on key codes but not mappings.
-" Basically this makes terminal Vim work sanely.
-" set timeoutlen=200
-set notimeout
-set ttimeout
-set ttimeoutlen=100
-
+" ALE {{{
+" https://github.com/dense-analysis/ale
+" Установка:
+" mkdir -p ~/.vim/pack/git-plugins/start
+" git clone --depth 1 https://github.com/dense-analysis/ale.git ~/.vim/pack/git-plugins/start/ale
+set omnifunc=ale#completion#OmniFunc
+"let g:ale_completion_enabled=1
+"let g:ale_lint_on_text_changed='never'
+"let g:ale_lint_on_insert_leave=0
 " }}}
