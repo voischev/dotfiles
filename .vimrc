@@ -57,6 +57,7 @@ autocmd FileType markdown setlocal wrap
 autocmd FileType javascript setlocal suffixesadd=.js
 autocmd FileType typescript setlocal suffixesadd=.ts,.tsx,.d.ts
 autocmd FileType python setlocal softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
+autocmd FileType yaml setlocal softtabstop=2 tabstop=2 shiftwidth=2
 " }}}
 
 " search {{{
